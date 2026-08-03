@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operator session 9 · Remote bot + memory - learn workbuddy with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-workbuddy-with-phoebe</a> / Operator session 9 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe · Operator track · Session 9 of 10</div>
+    <h1>Remote bot + <span class="accent">memory</span></h1>
+    <p class="sub">Until tonight, WorkBuddy worked when you sat at your desk. Now you cut the cord twice: link a chat platform so your phone can trigger desktop tasks from anywhere - the desktop executes, the chat is the leash - and fill Memory with the defaults you are tired of retyping, so your role and format rules ride along on every instruction automatically. Both powers come with a discipline: the plan gate does not get easier to respect on a small screen, and Memory only helps if you set it deliberately and audit it on a schedule.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Operator track</span>
+      <span class="chip audience">Office professionals - b1-b8 assumed, b8's scheduled briefing running</span>
+      <span class="chip audience">Bring your phone tonight - it is the second keyboard</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · Remote control + Memory</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: link, trigger, remember</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why this is the hardest session</h2>
+    </div>
+    <p class="lede">Not because the clicks are hard - linking a platform takes two minutes. It is the hardest because both features remove friction that was quietly protecting you. Remote control removes the desk; Memory removes the retyping. Friction removed is judgment exposed: the plan you used to read on a big screen now arrives on your phone between meetings, and the defaults you used to type consciously now apply themselves. Tonight is about taking both powers and keeping the operator's two checkpoints - approve the plan in, verify the deliverable out - intact at a distance.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Build-along - everyone does it</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      One chat platform linked in Assistant settings, the Meridian briefing triggered from your phone end to end, a felt memory of the rubber-stamp pull (we induce it on purpose, safely), and a Memory panel holding your role plus two format rules - with a monthly audit already on your calendar.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: REMOTE CONTROL ============ -->
+  <section class="section" id="remote-control">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the official Install &amp; Use guide (remote control), Platform Integration docs</span>
+      <h2>Your phone drives, your desktop does <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">In the Assistant settings you link Slack, Telegram or Discord (the docs also list WeChat Work, Feishu, DingTalk and QQ - pick whichever chat app already lives on your phone). From then on, a message in that chat is a task instruction: your desktop at home wakes up, plans, executes in its sandbox on its authorized folders, and posts the deliverable back into the same thread. Nothing runs ON the phone. The desktop executes; the chat is the leash.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Remote loop: phone sends an instruction into a chat platform, the desktop agent executes at your desk, and the deliverable lands back in the same chat thread.">
+        <style>
+          .rbT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .rbS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .rbX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .rbN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .rbWire { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#rbHd); }
+        </style>
+        <defs>
+          <marker id="rbHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <rect x="30" y="80" width="140" height="52" rx="8" fill="#1E293B"/>
+        <text class="rbT" x="46" y="102">PHONE</text>
+        <text class="rbS" x="46" y="120">you, anywhere</text>
+        <rect x="220" y="80" width="210" height="52" rx="8" fill="#003BA3"/>
+        <text class="rbT" x="236" y="102">CHAT PLATFORM</text>
+        <text class="rbS" x="236" y="120">Slack · Telegram · Discord</text>
+        <rect x="480" y="80" width="210" height="52" rx="8" fill="#0052D9"/>
+        <text class="rbT" x="496" y="102">DESKTOP AGENT</text>
+        <text class="rbS" x="496" y="120">executes at your desk</text>
+        <rect x="740" y="80" width="120" height="52" rx="8" fill="#0087A8"/>
+        <text class="rbT" x="754" y="102">DELIVERS</text>
+        <text class="rbS" x="754" y="120">file + note</text>
+        <path class="rbWire" d="M170,106 L215,106"/>
+        <path class="rbWire" d="M430,106 L475,106"/>
+        <path class="rbWire" d="M690,106 L735,106"/>
+        <path class="rbWire" d="M800,136 C800,190 380,190 330,142"/>
+        <text class="rbX" x="360" y="205">the result lands back in the SAME chat thread - you read it on the phone that sent it</text>
+        <text class="rbX" x="30" y="62">your instruction, typed in a chat message</text>
+        <rect x="30" y="240" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="rbN" x="54" y="252">Nothing executes on the phone. The sandbox, folder authorization and audit trail all still live on the desktop.</text>
+        <rect x="30" y="272" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="rbN" x="54" y="284">The desktop must be on and signed in. Remote is a leash to your machine, not a cloud clone of it.</text>
+        <rect x="30" y="304" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="rbN" x="54" y="316">Same contract as b1: one instruction in, one verifiable file out. Only the keyboard moved.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the remote loop: desktop executes, chat is the leash</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What remote is actually for<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Remote is not a gimmick; it changes when work can start. The patterns that pay:</p>
+        <ul>
+          <li><strong>Commute-start</strong> - trigger the data merge on the train so the deliverable is waiting when you sit down.</li>
+          <li><strong>Meeting-reactive</strong> - leadership asks a question at 2pm; you fire the analysis from the hallway and paste the answer before the meeting ends.</li>
+          <li><strong>Checking on b8</strong> - your scheduled briefing ran at 7am; from the kitchen you ask for status and read the result without opening a laptop.</li>
+        </ul>
+        <p>Notice what all three share: the task family was already proven at the desk (b3, b4, b8). Remote is for tasks you already trust the shape of - it is a distance extension, not a place to try new task types for the first time.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Which platform should you link?<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Already on Slack all day?</strong> Link Slack - the deliverable lands where your team already looks, and b8's briefing push shares the wiring.</li>
+          <li><strong>Want work and life separated?</strong> Telegram or Discord keeps WorkBuddy out of your employer's workspace and its retention policies.</li>
+          <li><strong>One platform is plenty.</strong> Every linked platform is another surface that can issue instructions to your machine - link the one you will use, not all of them. Re-verify the current platform list at workbuddy.ai; it drifts.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: TASK MANAGEMENT AT A DISTANCE ============ -->
+  <section class="section" id="remote-discipline">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers Task Management docs + the plan-confirmation behavior from b1</span>
+      <h2>The plan gate on a small screen <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">From chat you can create a task, check its status, and view results - the same task management you know, at a distance. What changes is not the mechanics; it is you. The plan still arrives for confirmation, but now you read it on a phone, walking, between two other notifications. A plan skimmed in four seconds and approved with a thumb is not a plan gate - it is a rubber stamp with extra steps. Remote work needs sharper instructions precisely because the plan check gets weaker.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Remote plan-gate discipline: instruction from phone, desktop plans, plan arrives in chat, then either a real read leading to approve or revise, or a four-second skim leading to a rubber stamp.">
+        <style>
+          .pgT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .pgS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .pgX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .pgN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .pgWire { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#pgHd); }
+        </style>
+        <defs>
+          <marker id="pgHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <rect x="30" y="40" width="200" height="52" rx="8" fill="#1E293B"/>
+        <text class="pgT" x="46" y="62">SEND FROM PHONE</text>
+        <text class="pgS" x="46" y="80">all five levers, up front</text>
+        <rect x="290" y="40" width="180" height="52" rx="8" fill="#003BA3"/>
+        <text class="pgT" x="306" y="62">DESKTOP PLANS</text>
+        <text class="pgS" x="306" y="80">steps come back to chat</text>
+        <rect x="530" y="40" width="180" height="52" rx="8" fill="#0052D9"/>
+        <text class="pgT" x="546" y="62">PLAN IN CHAT</text>
+        <text class="pgS" x="546" y="80">the fork is HERE</text>
+        <path class="pgWire" d="M230,66 L285,66"/>
+        <path class="pgWire" d="M470,66 L525,66"/>
+        <rect x="380" y="150" width="230" height="52" rx="8" fill="#0087A8"/>
+        <text class="pgT" x="396" y="172">REAL READ · 30 sec</text>
+        <text class="pgS" x="396" y="190">right files? right output?</text>
+        <rect x="660" y="150" width="200" height="52" rx="8" fill="#1E293B"/>
+        <text class="pgT" x="676" y="172">4-SECOND SKIM</text>
+        <text class="pgS" x="676" y="190">thumb hits approve</text>
+        <path class="pgWire" d="M580,92 C560,120 520,135 500,145"/>
+        <path class="pgWire" d="M660,92 C700,115 740,130 755,145"/>
+        <text class="pgX" x="380" y="228">→ approve, or reply with a fix from chat</text>
+        <text class="pgX" x="660" y="228">→ this is where remote goes wrong</text>
+        <rect x="30" y="258" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="pgN" x="54" y="270">The fix is upstream: instructions sharp enough that the plan holds no surprises. Five levers, every remote task.</text>
+        <rect x="30" y="290" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="pgN" x="54" y="302">If a plan needs real thought, say "hold" and confirm from a big screen later. Deferring the gate beats rushing it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same gate, a smaller screen, a sharper discipline</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Create, check, view - the remote verbs<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three things you can do from the chat thread, and the operator's rule for each:</p>
+        <ul>
+          <li><strong>Create a task</strong> - send the instruction as a message. Rule: write it like a b2 template, not like a text to a friend. "Run the Meridian weekly briefing from ~/Documents/Meridian, one page, bullets max 15 words, cross-check figures, attach audit trail" - yes, all of it, from your thumbs. Saved templates make this a paste, not an essay.</li>
+          <li><strong>Check status</strong> - ask what is running and where it is. Rule: status checks are free; use them instead of anxiety.</li>
+          <li><strong>View results</strong> - the deliverable and its summary post back to the thread. Rule: the verify checkpoint still applies. Reading a result on your phone does not make it verified; it makes it read.</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="callout warn">
+      <strong>Remote + scheduled together = the least-supervised mode WorkBuddy has</strong>
+      b8 removed you from the trigger; tonight removes you from the desk. Combine them and work runs with no human at either end - which is the goal, and the risk. The non-negotiable: keep a verify ask in every remote instruction and every scheduled template, so the audit trail is always attached when you finally do look. Unsupervised execution is fine; unsupervised SHIPPING is not.
+    </div>
+  </section>
+
+  <!-- ============ PART 3: MEMORY ============ -->
+  <section class="section" id="memory">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the Memory docs (private, editable defaults)</span>
+      <h2>Memory: the format lever, made permanent <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Memory is private to you and editable - a small panel of standing defaults: who you are, what you work on, how you like output shaped. In b2 you learned that Memory can hold the Format lever for you. Tonight it does, permanently: write "my briefings are always one page, bullets max 15 words" once, and every future instruction inherits it without you typing it. Your instruction and your Memory defaults merge into the effective instruction the agent actually plans from.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tonight's typed instruction and the standing Memory defaults merge into the effective instruction WorkBuddy plans from.">
+        <style>
+          .meT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .meS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .meX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .meN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .meWire { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#meHd); }
+        </style>
+        <defs>
+          <marker id="meHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <rect x="30" y="40" width="300" height="70" rx="8" fill="#003BA3"/>
+        <text class="meT" x="46" y="64">TODAY'S INSTRUCTION</text>
+        <text class="meS" x="46" y="82">goal · files · expert · verify ask</text>
+        <text class="meS" x="46" y="98">typed fresh, per task</text>
+        <rect x="30" y="140" width="300" height="70" rx="8" fill="#0087A8"/>
+        <text class="meT" x="46" y="164">MEMORY DEFAULTS</text>
+        <text class="meS" x="46" y="182">role: marketing analyst, Meridian</text>
+        <text class="meS" x="46" y="198">format: 1 page · bullets max 15 words</text>
+        <path class="meWire" d="M330,75 C420,75 450,105 490,120"/>
+        <path class="meWire" d="M330,175 C420,175 450,145 490,130"/>
+        <rect x="500" y="90" width="350" height="70" rx="8" fill="#0052D9"/>
+        <text class="meT" x="516" y="114">EFFECTIVE INSTRUCTION</text>
+        <text class="meS" x="516" y="132">what the agent actually plans from:</text>
+        <text class="meS" x="516" y="148">your words + your standing defaults</text>
+        <text class="meX" x="500" y="185">Memory holds your Format lever - the biggest remote win.</text>
+        <rect x="30" y="248" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="meN" x="54" y="260">Private to you and editable. Open it, read it, change it - Memory is a settings panel, not a mystery.</text>
+        <rect x="30" y="280" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="meN" x="54" y="292">Set deliberately, audit monthly. A stale default is a silent lever pulling the wrong way on every task.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - instruction + Memory defaults = the effective instruction</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What belongs in Memory - and what does not<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Belongs:</strong> your role and project ("marketing analyst, working on Meridian's Malaysia entry"), standing format rules ("briefings one page, bullets max 15 words", "currency figures always show the source currency"), tone defaults ("plain English, no jargon"). Things true of EVERY task.</p>
+        <p><strong>Does not belong:</strong> anything per-task (goals, file names, deadlines - those are instruction work), anything you would not want silently applied in three months, and anything secret. Memory is private to you, but it is still a standing input to every plan - treat it like a config file, not a diary.</p>
+        <p>The test for a candidate default: "would I be happy discovering this clause was silently added to a task I run in November?" If you hesitate, it goes in the instruction, not in Memory.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the monthly audit is not optional<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Memory fails the way b2's verify lever taught you things fail: silently. A default you set in August ("everything relates to the Malaysia launch") is quietly wrong by November when the launch has shipped - and every deliverable tilts toward a project that no longer exists, with no error message anywhere. So the audit is calendared, not remembered: once a month, open Memory, read every line, ask "still true?", delete or update what is not. Two minutes. It is the same discipline as b8's scheduled-task review - anything that acts without you must be re-checked by you on a schedule.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ BUILD-ALONG 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along 1 of 2</span>
+      <h2>Link, trigger, and feel the rubber-stamp pull <span class="tag demo">★ 12 min · everyone does it</span></h2>
+    </div>
+    <p class="lede">You will run the Meridian briefing from your phone - and on the way, deliberately experience the exact failure mode Part 2 warned about, in a task where it cannot hurt you.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Link a platform.</strong> Desktop app → Assistant settings → link Slack, Telegram or Discord. Follow the connect flow for your platform; send a hello message both ways to confirm the wire is live.</p></div>
+      <div class="step"><p><strong>Trigger from your phone.</strong> Put the laptop lid HALF closed (machine on, your hands off). From the chat app, send the briefing instruction: "Build the Meridian weekly briefing from ~/Documents/Meridian - one page, bullets max 15 words, cross-check every figure, attach the audit trail."</p></div>
+      <div class="step"><p><strong>When the plan arrives in chat, do NOT approve for 10 full seconds.</strong> Count them. Feel your thumb hovering. That pull toward instant approval - notification in, tap, done - is the rubber-stamp reflex, and now you have met it in a safe task instead of discovering it in a dangerous one.</p></div>
+      <div class="step"><p><strong>Now actually read the plan</strong> - right files? right output? - then approve. Watch status if you like, or pocket the phone: the desktop is executing either way.</p></div>
+      <div class="step"><p><strong>Read the deliverable in the thread.</strong> Same file quality as a desk-triggered run - the loop, the sandbox and the audit trail never moved. Only your keyboard did.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The 10-second rule scales.</strong> Operators who keep a beat of deliberate delay on phone approvals catch the mis-scoped plan a few times a year - the one where "clean up the folder" was about to mean something else entirely. Ten seconds against a shipped mistake is the cheapest insurance in this course.</p>
+    </div>
+  </section>
+
+  <!-- ============ BUILD-ALONG 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Build-along 2 of 2</span>
+      <h2>Write your Memory, watch it land <span class="tag demo">★ 10 min · everyone does it</span></h2>
+    </div>
+    <p class="lede">b1 told you to leave Memory empty. Tonight you fill it deliberately - three lines, no more - and prove to yourself that the defaults actually reach the plan.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Open Memory</strong> in settings. Write your role line: who you are and what project you are on, one sentence. Example: "I am a marketing analyst working on Meridian, a Singapore tea brand entering Malaysia."</p></div>
+      <div class="step"><p><strong>Add two format rules</strong> you are tired of retyping. The classics: "My briefings are always one page, bullets max 15 words" and "Always show currency codes next to figures." Yours may differ - steal from the format clauses you keep writing in b3-b8.</p></div>
+      <div class="step"><p><strong>Rerun a task WITHOUT the format clause.</strong> Send "Summarize this week's Meridian sales from ~/Documents/Meridian" - note that you did not say one page, did not say bullets.</p></div>
+      <div class="step"><p><strong>Spot the defaults landing.</strong> Read the plan: the one-page shape and the bullet rule are there anyway. Your Memory just held the Format lever for you. That is the whole feature.</p></div>
+      <div class="step"><p><strong>Calendar the audit.</strong> Recurring event, first weekday of each month, two minutes: "Open WorkBuddy Memory, read every line, delete what is stale." Do it now, phones are already out.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 20-30 min total</span></h2>
+    </div>
+    <ul>
+      <li>One remote-triggered task per day this week, real work, from wherever you are - commute, kitchen, hallway. Every plan gets the 10-second read before approval. By Friday the discipline should feel like a habit, not a rule.</li>
+      <li>After three remote runs, review your instructions: which lever did you skimp on when typing with thumbs? Tighten your saved template so the phone version is as sharp as the desk version.</li>
+      <li>Confirm the Memory audit is on your calendar for next month. When it fires, actually do it: read every line, ask "still true?", fix what is not.</li>
+      <li>Preview for b10: open the audit trail of one remote task and read it end to end. Next session turns that skim into the shipping discipline for the whole Meridian pack.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session teaches the remote-control and Memory surfaces from the official docs and Tencent Cloud's guides. WorkBuddy is fast-moving (global launch May 2026) - the supported platform list and settings names drift, so re-verify at workbuddy.ai before you rely on a specific menu path. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - "WorkBuddy Download, Install &amp; Use Guide (Overseas)"</span><span class="note">Remote control via Slack/Telegram/Discord - the desktop-executes model · Part 1, Build-along 1</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WorkBuddy docs - Platform Integration (Slack, Telegram, Discord, WeChat Work, Feishu, DingTalk, QQ) + Task Management</span><span class="note">Linking in Assistant settings; create / check status / view results from chat · Parts 1-2</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WorkBuddy docs + Tencent Cloud - Memory (private, editable defaults)</span><span class="note">Role + standing format defaults; the merge into the effective instruction · Part 3, Build-along 2</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Tencent Cloud - "What WorkBuddy Can Do": plan confirmation + audit trail</span><span class="note">The gate and the trail carry to remote unchanged; the full verify discipline is b10</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · When you trigger a task from your phone via Telegram, where does the work execute?</p>
+      <button class="qopt" type="button">A · On the phone, using a mobile sandbox</button>
+      <button class="qopt" type="button">B · On your desktop at home - same sandbox, same authorized folders, same audit trail</button>
+      <button class="qopt" type="button">C · On Telegram's servers</button>
+      <p class="qwhy">The desktop executes; the chat is the leash. Every boundary you set in b1 - folder authorization, sandbox, audit trail - stays exactly where it was. Only the keyboard moved, which is also why the desktop must be on and signed in.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why do remote instructions need to be SHARPER than desk instructions?</p>
+      <button class="qopt" type="button">A · Because the plan gets confirmed on a phone, where skim-and-approve is the natural reflex - the plan check weakens, so the instruction must carry more</button>
+      <button class="qopt" type="button">B · Because chat platforms truncate long messages</button>
+      <button class="qopt" type="button">C · They do not - remote and desk instructions are identical in every way</button>
+      <p class="qwhy">The mechanics are identical; the human is not. Reading plans on a phone is where rubber-stamping starts, so the fix moves upstream: five levers in every remote instruction, and the 10-second read before every thumb-approval.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">3 · Which of these belongs in Memory?</p>
+      <button class="qopt" type="button">A · "Today's task uses my-pilot-mar-apr.xlsx"</button>
+      <button class="qopt" type="button">B · "The deadline for the launch deck is Friday"</button>
+      <button class="qopt" type="button">C · "My briefings are always one page, bullets max 15 words"</button>
+      <p class="qwhy">Memory holds what is true of EVERY task - your role and standing format rules. File names and deadlines are per-task instruction work; put them in Memory and they become stale defaults silently steering future tasks. Set deliberately, audit monthly.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Operator session 9 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The remote loop</b><span>Phone → chat platform → desktop executes → deliverable back in the thread. Desktop must be on; nothing runs on the phone.</span></div>
+      <div class="cheat-item"><b>Where to link</b><span>Assistant settings → Slack, Telegram or Discord (docs also list WeChat Work, Feishu, DingTalk, QQ). Link one, not all. Re-verify at workbuddy.ai.</span></div>
+      <div class="cheat-item"><b>Remote verbs</b><span>Create task · check status · view results - all from chat. Status checks are free; use them instead of anxiety.</span></div>
+      <div class="cheat-item"><b>The 10-second rule</b><span>Plan arrives on the phone: count ten, THEN read - right files? right output? - then approve. Rubber-stamping starts on small screens.</span></div>
+      <div class="cheat-item"><b>Sharper upstream</b><span>Remote weakens the plan check, so the instruction carries more: all five levers, every remote task, pasted from saved templates.</span></div>
+      <div class="cheat-item"><b>Memory = Format lever</b><span>Role line + standing format rules ("one page, bullets max 15 words"). Merges into every effective instruction automatically.</span></div>
+      <div class="cheat-item"><b>Memory hygiene</b><span>Per-task facts stay OUT (files, deadlines). Set deliberately, audit monthly - a stale default fails silently, like an unverified number.</span></div>
+      <div class="cheat-item"><b>The danger pairing</b><span>Remote + scheduled = least-supervised mode. Keep a verify ask in every remote instruction and template - execution unsupervised, shipping never.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Operator session 9 of 10 · learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b8-automation.html">← b8: Automation</a> &nbsp;·&nbsp; <a href="b10-capstone-ship.html">Next: Capstone - verify, govern, ship →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

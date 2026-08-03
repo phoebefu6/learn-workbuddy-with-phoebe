@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 3 · Where it fits your team - learn workbuddy with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-workbuddy-with-phoebe</a> / Leader session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe · Leader track · Session 3 of 6</div>
+    <h1>Where it fits your <span class="accent">team</span></h1>
+    <p class="sub">a2 showed you what WorkBuddy actually does. Tonight answers the question that decides whether any of it matters: which parts of YOUR team's week belong to an agent, and which parts must never leave human hands. You will learn a two-axis triage - task ambiguity against stakes - map a typical analyst, marketer and ops week onto the documented task families, name the four things agents are genuinely bad at, and leave with a method for picking the three pilot tasks that will prove or kill the case. No tool gets opened tonight; this is deciding work.</p>
+    <div class="chip-row">
+      <span class="chip level">🤝 Leader track</span>
+      <span class="chip audience">C-level · managers · team leads</span>
+      <span class="chip audience">No tool needed - decide-and-govern mode</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:5">3-24 · The 2x2 + your team's week</span>
+      <span class="a3" style="flex:4">24-42 · Build the pilot shortlist</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The question tonight actually answers</h2>
+    </div>
+    <p class="lede">"Should we use an agent?" is the wrong question - too big to answer and too vague to fail. The right question is per-task: <strong>for this specific recurring chore, is delegation to an agent cheaper, safer and better than doing it by hand?</strong> Tonight gives you two instruments for answering it at scale: a triage 2x2 you can apply to any task in thirty seconds, and a week-mapping exercise that finds the agent-shaped hours hiding in your team's calendar. WorkBuddy's own capability guide gives us the delegation menu; your team's real week gives us the demand side.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Exercise - do it on your real team</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The ambiguity-x-stakes triage drawn from memory, your team's week roughly sorted into delegable hours and judgment hours, the four agent blind spots you will police as a leader - and a started pilot shortlist of three tasks with clear success criteria and small blast radius, ready for a4's governance pass and a5's rollout plan.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE TRIAGE 2x2 ============ -->
+  <section class="section" id="triage">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · built on Tencent Cloud's documented task families + independent 2026 reviews</span>
+      <h2>Delegate or DIY: the two axes that decide <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">Two properties of a task predict almost everything about how delegation goes. <strong>Ambiguity</strong>: how many reasonable interpretations does the instruction leave open? <strong>Stakes</strong>: what does a wrong or mediocre result cost before someone catches it? Cross them and you get four postures - not "yes or no to AI", but four different ways of working with an agent, each with its own supervision price.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two-by-two triage: task ambiguity against stakes. Low ambiguity low stakes: delegate now. Low ambiguity high stakes: delegate plus heavy verify. High ambiguity low stakes: delegate to draft. High ambiguity high stakes: human leads.">
+        <style>
+          .txT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .txS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .txA { font: 700 12px Inter, sans-serif; fill: #1E293B; }
+          .txX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .txN { font: 600 13px Inter, sans-serif; fill: #013340; }
+        </style>
+        <text class="txA" x="120" y="30">high stakes ↑</text>
+        <rect x="120" y="40" width="356" height="142" rx="10" fill="#0052D9"/>
+        <text class="txT" x="140" y="66">DELEGATE + HEAVY VERIFY</text>
+        <text class="txS" x="140" y="88">board-pack figures · client invoice summary</text>
+        <text class="txS" x="140" y="106">monthly numbers that leave the building</text>
+        <text class="txS" x="140" y="130">posture: agent does the work, a named human</text>
+        <text class="txS" x="140" y="148">checks every figure against the audit trail</text>
+        <rect x="484" y="40" width="356" height="142" rx="10" fill="#1E293B"/>
+        <text class="txT" x="504" y="66">HUMAN LEADS</text>
+        <text class="txS" x="504" y="88">pricing decision · restructure comms</text>
+        <text class="txS" x="504" y="106">strategy narrative · anything political</text>
+        <text class="txS" x="504" y="130">posture: human owns it end to end; the agent</text>
+        <text class="txS" x="504" y="148">may fetch inputs, never draft the answer</text>
+        <rect x="120" y="190" width="356" height="142" rx="10" fill="#0087A8"/>
+        <text class="txT" x="140" y="216">DELEGATE NOW</text>
+        <text class="txS" x="140" y="238">batch-rename receipts · convert to PDF</text>
+        <text class="txS" x="140" y="256">weekly data merge · file reorganization</text>
+        <text class="txS" x="140" y="280">posture: hand it over this week - one clear</text>
+        <text class="txS" x="140" y="298">sentence in, one checkable file out</text>
+        <rect x="484" y="190" width="356" height="142" rx="10" fill="#2E7CF6"/>
+        <text class="txT" x="504" y="216">DELEGATE TO DRAFT</text>
+        <text class="txS" x="504" y="238">first-pass market research · meeting-notes</text>
+        <text class="txS" x="504" y="256">summary · deck skeleton · report outline</text>
+        <text class="txS" x="504" y="280">posture: agent produces the draft, human</text>
+        <text class="txS" x="504" y="298">adds the judgment - retries are cheap here</text>
+        <text class="txA" x="120" y="356">← low ambiguity</text>
+        <text class="txA" x="700" y="356">high ambiguity →</text>
+        <rect x="120" y="376" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="txN" x="144" y="388">Start every pilot bottom-left. Earn your way up and right one task at a time - never the reverse.</text>
+        <rect x="120" y="408" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="txN" x="144" y="420">Stakes are about what escapes unchecked: a wrong number to a client outranks a messy internal draft.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the thirty-second triage for any recurring task</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What agents are genuinely bad at - the four keeps<span class="mini">6 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The honest edges, from Tencent's own docs and the independent reviews. These four never move out of the top-right quadrant, and a leader's job is to say so out loud before anyone over-delegates:</p>
+        <ul>
+          <li><strong>Goals.</strong> An agent executes the goal it is given; it cannot tell you whether that goal is worth pursuing, for whom, or at what standard. Every misfire the operator track studies traces back to a goal the human never made explicit.</li>
+          <li><strong>Taste.</strong> Output can satisfy every stated constraint and still read as generic. The craft nobody wrote down - what your clients consider "us" - stays a human contribution, even when an Expert narrows the gap.</li>
+          <li><strong>Accountability.</strong> A deliverable can be generated; responsibility cannot. When a figure ships to a client, a named person on your team vouched for it. "The agent did it" is not an answer you ever want to hear in a postmortem, so design the workflow so it can never be the answer.</li>
+          <li><strong>Novel judgment.</strong> Agents excel where patterns exist. The first time a situation occurs - a new regulation, a surprise competitor move, an unusual client request - there is no pattern to execute, and pattern-shaped output about a novel situation is quietly dangerous.</li>
+        </ul>
+        <p>Notice what this list is NOT: it is not "agents are bad at spreadsheets" or "agents make things up so avoid them". The documented task families - documents, data analysis, research, file operations, scheduled automation - are genuinely strong. The line runs between execution and judgment, not between task types.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: YOUR TEAM'S WEEK ============ -->
+  <section class="section" id="team-week">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the demand side: your team's calendar</span>
+      <h2>Mapping a real week onto the task families <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The capability guide names five task families: documents and reports, data analysis, research, file operations, scheduled automation. The useful move is to hold that menu against a real week. Below are three illustrative 40-hour weeks - an analyst, a marketer, an ops coordinator. The pattern repeats across roles: <strong>a quarter to a third of the week is agent-shaped</strong> - recurring, low-ambiguity, checkable - and it is rarely the hours people think of first. The judgment hours stay untouched, and that is the point: delegation buys those hours back.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three illustrative 40-hour weeks for an analyst, a marketer and an ops coordinator, split into agent-shaped hours, delegate-with-verify hours, and judgment hours that stay human.">
+        <style>
+          .wkT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .wkR { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .wkX { font: 400 11.5px Inter, sans-serif; fill: #64748B; }
+          .wkL { font: 600 12px Inter, sans-serif; fill: #1E293B; }
+          .wkN { font: 600 13px Inter, sans-serif; fill: #013340; }
+        </style>
+        <rect x="170" y="24" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="wkL" x="192" y="36">agent-shaped</text>
+        <rect x="320" y="24" width="14" height="14" rx="3" fill="#2E7CF6"/>
+        <text class="wkL" x="342" y="36">delegate + verify</text>
+        <rect x="500" y="24" width="14" height="14" rx="3" fill="#64748B"/>
+        <text class="wkL" x="522" y="36">judgment - stays human</text>
+        <text class="wkR" x="30" y="90">Analyst</text>
+        <rect x="170" y="66" width="192" height="40" rx="6" fill="#0087A8"/>
+        <text class="wkT" x="186" y="91">12 h</text>
+        <rect x="362" y="66" width="96" height="40" fill="#2E7CF6"/>
+        <text class="wkT" x="378" y="91">6 h</text>
+        <rect x="458" y="66" width="352" height="40" rx="6" fill="#64748B"/>
+        <text class="wkT" x="474" y="91">22 h · analysis calls, stakeholder meetings</text>
+        <text class="wkX" x="170" y="126">agent-shaped: weekly data merges, chart packs, status reports · verify: figures for leadership</text>
+        <text class="wkR" x="30" y="184">Marketer</text>
+        <rect x="170" y="160" width="160" height="40" rx="6" fill="#0087A8"/>
+        <text class="wkT" x="186" y="185">10 h</text>
+        <rect x="330" y="160" width="80" height="40" fill="#2E7CF6"/>
+        <text class="wkT" x="346" y="185">5 h</text>
+        <rect x="410" y="160" width="400" height="40" rx="6" fill="#64748B"/>
+        <text class="wkT" x="426" y="185">25 h · campaign strategy, creative review, brand calls</text>
+        <text class="wkX" x="170" y="220">agent-shaped: competitor scans, content repurposing, asset renaming · verify: external copy drafts</text>
+        <text class="wkR" x="30" y="278">Ops</text>
+        <rect x="170" y="254" width="224" height="40" rx="6" fill="#0087A8"/>
+        <text class="wkT" x="186" y="279">14 h</text>
+        <rect x="394" y="254" width="64" height="40" fill="#2E7CF6"/>
+        <text class="wkT" x="404" y="279">4 h</text>
+        <rect x="458" y="254" width="352" height="40" rx="6" fill="#64748B"/>
+        <text class="wkT" x="474" y="279">22 h · vendor calls, exceptions, escalations</text>
+        <text class="wkX" x="170" y="314">agent-shaped: weekly briefings, file organization, format conversion · verify: invoice summaries</text>
+        <rect x="30" y="344" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="wkN" x="54" y="356">Illustrative splits, not benchmarks - the exercise below produces YOUR team's real version of this chart.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - where the agent-shaped hours hide in three typical weeks</figcaption>
+    </figure>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The hours people name first are the wrong ones.</strong> Ask a team "what should the agent do?" and they nominate their hardest work - the strategy doc, the tricky analysis - because that is where the pain is. The 2x2 says the opposite: the win is in the boring bottom-left hours nobody defends. Delegate the merge, keep the meaning.</p>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The pilot shortlist method - three tasks, three filters<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When you move from mapping to piloting (a5 builds the full rollout), resist the temptation to pilot the most impressive task. Pilot the most <em>provable</em> one. Pick exactly three recurring tasks that pass all three filters:</p>
+        <ul>
+          <li><strong>High frequency.</strong> Weekly or better. A monthly task gives you one data point per month; a pilot needs repetitions to show a trend and to let instructions improve between runs.</li>
+          <li><strong>Clear success criteria.</strong> You can say, before the run, what a correct result looks like - "all Q1 files merged, totals match the source sheets". If success is a matter of opinion, the pilot will end in a matter of opinion.</li>
+          <li><strong>Low blast radius.</strong> A wrong result costs an internal redo, not a client apology. Bottom-left of the 2x2 only. The stakes ladder is for later, after the verify habit exists (a4 makes it policy).</li>
+        </ul>
+        <p>Three is deliberate: one task can be a fluke, five dilutes attention. Three tasks, run weekly for a month, each with a named operator and a written success criterion, produce the only slide a6 needs: hours saved, error rate, and whether the team asked to keep it.</p>
+        <p>One honesty note: task-family names and capabilities drift as WorkBuddy ships updates (global launch was May 2026) - re-verify the current menu at workbuddy.ai before you commit the shortlist.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ EXERCISE ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Exercise</span>
+      <h2>Build your team's pilot shortlist <span class="tag exercise">◐ 18 min in session + this week</span></h2>
+    </div>
+    <ul>
+      <li><strong>List ten.</strong> From real calendars, inboxes and standing meetings, list ten recurring tasks your team did last week. Chores count double - the boring ones are usually the delegable ones.</li>
+      <li><strong>Plot them.</strong> Place each on the ambiguity-x-stakes 2x2 from Part 1. Argue about placements - the argument IS the value; it surfaces what your team believes about stakes.</li>
+      <li><strong>Filter to three.</strong> From the bottom-left quadrant, keep the three that pass all three shortlist filters: weekly-or-better frequency, a success criterion you can write in one sentence, internal-only blast radius.</li>
+      <li><strong>Write the criteria.</strong> One sentence per task: what does a correct result look like, and who checks it? If you cannot write the sentence, the task goes back in the pool.</li>
+      <li><strong>Name the operators.</strong> One person per task who will actually run it - and send them to operator sessions b1 and b2 before the pilot starts. Bring the shortlist to a4: next session wraps it in the governance it needs.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">The 2x2 and the shortlist filters are this course's frames; the delegation menu and the honest limits underneath them come from the sources below. WorkBuddy is fast-moving (global launch May 2026) - re-verify capability names at workbuddy.ai before you present this to your team. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - "AI Agent for Business Automation: What WorkBuddy Can Do"</span><span class="note">The five task families as the delegation menu · Parts 1-2</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Eigent - "WorkBuddy AI Review (2026)" (independent)</span><span class="note">Strengths and honest limitations behind the four keeps · Live card</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">WorkBuddy docs - Practice Cases</span><span class="note">Concrete task patterns behind the week map; operators build them in b3-b8</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Team plan + Admin Console material</span><span class="note">Named here only as the pilot's destination; economics land in a5</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · A monthly board pack with figures that go to investors sits where on the triage?</p>
+      <button class="qopt" type="button">A · Delegate now - it is a recurring, well-defined task</button>
+      <button class="qopt" type="button">B · Human leads - numbers are too risky for agents</button>
+      <button class="qopt" type="button">C · Delegate + heavy verify - low ambiguity, high stakes: agent works, a named human checks every figure</button>
+      <p class="qwhy">The task is low-ambiguity (the format and sources repeat monthly) but high-stakes (errors escape to investors). That quadrant's posture is delegation WITH a mandatory named verifier - not avoidance, and not blind trust.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why does the pilot shortlist demand weekly-or-better frequency?</p>
+      <button class="qopt" type="button">A · Repetitions produce a trend and let instructions improve between runs - one data point proves nothing</button>
+      <button class="qopt" type="button">B · Weekly tasks are more important than monthly ones</button>
+      <button class="qopt" type="button">C · The tool only supports weekly schedules</button>
+      <p class="qwhy">A pilot is an experiment, and experiments need sample size. Four to five runs in a month show whether results improve as the operator's instructions sharpen - a monthly task would take half a year to show the same curve.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Which of these belongs on the four-keeps list - things the leader never delegates?</p>
+      <button class="qopt" type="button">A · Merging twelve spreadsheets into one</button>
+      <button class="qopt" type="button">B · Deciding whether the goal is worth pursuing, and owning accountability for what ships</button>
+      <button class="qopt" type="button">C · Producing a first-draft competitor scan</button>
+      <p class="qwhy">Goals, taste, accountability, novel judgment - the four keeps. Merging files is classic delegate-now; a draft scan is delegate-to-draft. The line runs between execution and judgment, not between task types.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The right question</b><span>Not "should we use an agent?" but per task: is delegation cheaper, safer and better than doing THIS by hand?</span></div>
+      <div class="cheat-item"><b>The triage 2x2</b><span>Ambiguity x stakes → delegate now · delegate to draft · delegate + heavy verify · human leads. Thirty seconds per task.</span></div>
+      <div class="cheat-item"><b>Start bottom-left</b><span>Every pilot begins low-ambiguity, low-stakes. Earn your way up and right one task at a time - never the reverse.</span></div>
+      <div class="cheat-item"><b>The four keeps</b><span>Goals · taste · accountability · novel judgment. These never leave human hands, whatever the task family.</span></div>
+      <div class="cheat-item"><b>The delegation menu</b><span>Documents + reports · data analysis · research · file operations · scheduled automation - the documented families to map against.</span></div>
+      <div class="cheat-item"><b>The week pattern</b><span>Roughly a quarter to a third of a typical week is agent-shaped - recurring, low-ambiguity, checkable. Map YOUR week to find yours.</span></div>
+      <div class="cheat-item"><b>Shortlist filters</b><span>Three tasks, all three filters: high frequency · clear success criteria · low blast radius. Provable beats impressive.</span></div>
+      <div class="cheat-item"><b>Next stop</b><span>a4 wraps the shortlist in governance: permissions, data, and verify-before-external-use as team policy.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 3 of 6 · learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a2-what-workbuddy-does.html">← a2: What WorkBuddy actually does</a> &nbsp;·&nbsp; <a href="a4-risk-governance.html">Next: Risk and governance →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

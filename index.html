@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn workbuddy with phoebe - a two-track course on Tencent's WorkBuddy AI agent</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(0,82,217,.12); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#EFF5FD); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe</div>
+    <h1>Two tracks into the agent that finishes your office work</h1>
+    <p class="sub">Tencent's WorkBuddy takes one plain-language instruction, plans the steps, executes them on your computer, and hands back a finished file - "you say, it does." A leader track teaches you to judge where it pays off, govern the risk, and roll it out to a team without touching the tool. An operator track builds one real deliverable per session - the market-entry pack for Meridian, a Singapore tea brand entering Malaysia - through data analysis, research, decks, connectors, and scheduled automation. An instruction-quality simulator runs live in your browser on the operator pages: five levers, ten tasks, a scorecard that climbs as your instructions sharpen.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="10">10</b><span>golden-set tasks</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for C-level, managers &amp; team leads · 6 x 45 min · never opens the tool</span></h2>
+      <p class="plede">Deciding mode: what execution-driven agents actually are, where WorkBuddy fits your team's real work, the risk surface (permissions, data, verification), the rollout playbook with Credits economics - and how to measure whether any of it paid off.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-chatbots-to-agents.html" style="--diff:#34D399">
+        <span class="cicon">🤖</span>
+        <span class="cnum">Leader 1 · easy</span>
+        <h3>From chatbots to agents</h3>
+        <p>Assistive vs execution AI, "you say, it does", and where WorkBuddy sits in the 2026 agent landscape - hype removed, stakes kept.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-what-workbuddy-does.html" style="--diff:#34D399">
+        <span class="cicon">📦</span>
+        <span class="cnum">Leader 2 · easy</span>
+        <h3>What WorkBuddy actually does</h3>
+        <p>The four-stage loop, the five task families, Experts and skill packages in plain words - and a live demo narrative you can retell.</p>
+        <span class="meta"><span class="pill light">No-tool session</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-where-it-fits.html" style="--diff:#FBBF24">
+        <span class="cicon">🎯</span>
+        <span class="cnum">Leader 3 · medium</span>
+        <h3>Where it fits your team</h3>
+        <p>Delegate-vs-DIY triage, mapping your team's week onto the task families, what agents are genuinely bad at, and the pilot shortlist.</p>
+        <span class="meta"><span class="pill light">Task-triage exercise</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-risk-governance.html" style="--diff:#FBBF24">
+        <span class="cicon">🛡️</span>
+        <span class="cnum">Leader 4 · medium</span>
+        <h3>Risk and governance</h3>
+        <p>Folder authorization, permission modes, sandbox + audit trail, data management, verify-before-external-use - the risk register that matters.</p>
+        <span class="meta"><span class="pill light">Governance checklist</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-rollout-playbook.html" style="--diff:#FB923C">
+        <span class="cicon">🚀</span>
+        <span class="cnum">Leader 5 · deciding</span>
+        <h3>The rollout playbook</h3>
+        <p>Pilot design, Team plan + pooled Credits economics, Admin Console governance, champions, and vetting the Skills Marketplace.</p>
+        <span class="meta"><span class="pill light">Pilot-design exercise</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-value-roadmap.html" style="--diff:#FB923C">
+        <span class="cicon">📈</span>
+        <span class="cnum">Leader 6 · deciding</span>
+        <h3>Measuring value + the roadmap</h3>
+        <p>Adoption metrics that are not vanity, credit economics per deliverable, honest limits, when to scale - and what changes next in agent land.</p>
+        <span class="meta"><span class="pill light">Strategy session</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The operator track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for office professionals · 10 x 45 min · no coding · simulator on the key pages</span></h2>
+      <p class="plede">One running project, built one artifact per session: Meridian's market-entry pack - sales analysis, research report, competitor matrix, launch deck, scheduled weekly briefing, all through WorkBuddy, assembled and verified in b10. The 10-task instruction scorecard climbs 2 → 4 → 6 → 8 → 9 → 10 as the five levers come on.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-install-first-task.html" style="--diff:#34D399">
+        <span class="cicon">⚡</span>
+        <span class="cnum">Operator 1 · easy</span>
+        <h3>Install + your first task</h3>
+        <p>Safe setup, the one-project folder rule, the four-stage loop, plan confirmation - and your first finished deliverable tonight.</p>
+        <span class="meta"><span class="pill amber">▶ Operators start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-instruction-craft.html" style="--diff:#34D399">
+        <span class="cicon">🎚️</span>
+        <span class="cnum">Operator 2 · easy</span>
+        <h3>Instruction craft</h3>
+        <p>The five levers - goal, context, format, expert, verify - felt live in the simulator, plus the 10-task scorecard you will climb all course.</p>
+        <span class="meta"><span class="pill light">▶ The simulator session</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-data-analysis.html" style="--diff:#FBBF24">
+        <span class="cicon">📊</span>
+        <span class="cnum">Operator 3 · medium</span>
+        <h3>Data analysis</h3>
+        <p>Meridian's sales spreadsheets merged, charted, and explained - CSV/Excel in, analysis report out. First pack artifact ships.</p>
+        <span class="meta"><span class="pill light">Pack artifact 1</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-research-reports.html" style="--diff:#FBBF24">
+        <span class="cicon">🔎</span>
+        <span class="cnum">Operator 4 · medium</span>
+        <h3>Research + reports</h3>
+        <p>Multi-source research compiled into an organized market report and a competitor matrix that is actually a matrix.</p>
+        <span class="meta"><span class="pill light">Pack artifacts 2-3</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-expert-center.html" style="--diff:#FBBF24">
+        <span class="cicon">🎓</span>
+        <span class="cnum">Operator 5 · medium</span>
+        <h3>The Expert Center</h3>
+        <p>100+ built-in specialists - how routing works, when naming an Expert changes everything, and the slide-design Expert builds the launch deck.</p>
+        <span class="meta"><span class="pill light">Pack artifact 4</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-skill-marketplace.html" style="--diff:#FB923C">
+        <span class="cicon">🧰</span>
+        <span class="cnum">Operator 6 · hands-on</span>
+        <h3>Skill Marketplace + custom skills</h3>
+        <p>Skill packages, composing repeatable workflows, building a custom skill from your best instruction - and the security-scanning story.</p>
+        <span class="meta"><span class="pill light">Your first custom skill</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-connectors.html" style="--diff:#FB923C">
+        <span class="cicon">🔌</span>
+        <span class="cnum">Operator 7 · hands-on</span>
+        <h3>Connectors</h3>
+        <p>Google Drive, Gmail, Notion, Slack, GitHub, Jira - wiring reachable context beyond your folders, and what each connector changes about data.</p>
+        <span class="meta"><span class="pill light">MCP-pattern tour</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-automation.html" style="--diff:#FB923C">
+        <span class="cicon">⏰</span>
+        <span class="cnum">Operator 8 · hands-on</span>
+        <h3>Automation + scheduling</h3>
+        <p>Hourly, daily, weekly and one-time runs - Meridian's weekly briefing builds itself every Monday and lands in Slack before you wake.</p>
+        <span class="meta"><span class="pill light">Pack artifact 5</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-remote-bot-memory.html" style="--diff:#F87171">
+        <span class="cicon">📱</span>
+        <span class="cnum">Operator 9 · hardest</span>
+        <h3>Remote bot + memory</h3>
+        <p>Trigger desktop tasks from your phone via Slack, Telegram or Discord; task management at a distance; Memory defaults that hold your format lever.</p>
+        <span class="meta"><span class="pill light">Work from anywhere</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-capstone-ship.html" style="--diff:#F87171">
+        <span class="cicon">🏆</span>
+        <span class="cnum">Operator 10 · hardest</span>
+        <h3>Capstone: verify, govern, ship</h3>
+        <p>Audit trails as a discipline, the verify ask on every figure, Credits sanity - and the assembled market-entry pack ships at 10/10.</p>
+        <span class="meta"><span class="pill light">Ship it at 10/10</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors, one agent. Leaders decide and govern without opening the tool; operators ship deliverables from session one.</p>
+      <div class="path"><b>🤝 Leader (judge &amp; roll out)</b>
+        <a class="pstep" href="courses/a1-chatbots-to-agents.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-what-workbuddy-does.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-where-it-fits.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-risk-governance.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-rollout-playbook.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-value-roadmap.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ Operator (ship the pack)</b>
+        <a class="pstep" href="courses/b1-install-first-task.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-instruction-craft.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-data-analysis.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-research-reports.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-expert-center.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-skill-marketplace.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-connectors.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-automation.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-remote-bot-memory.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-capstone-ship.html">b10</a>
+      </div>
+      <div class="path"><b>🌱 Curious follower (a taste)</b>
+        <a class="pstep" href="courses/a1-chatbots-to-agents.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-install-first-task.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-instruction-craft.html">b2</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (lead AND operate)</b>
+        <a class="pstep" href="courses/a1-chatbots-to-agents.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-install-first-task.html">b1-b10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · taught from the official WorkBuddy docs, Tencent Cloud techpedia guides, launch coverage (TechNode, PR Newswire) and independent 2026 reviews · WorkBuddy moves fast - sources re-verified per delivery</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Learn\nWorkBuddy",
+  centerColor: "#003BA3",
+  sessions: [
+    { label: "Chatbots\nto agents", href: "courses/a1-chatbots-to-agents.html", color: "#34D399",
+      concepts: [
+        { label: "You say, it does", href: "courses/a1-chatbots-to-agents.html" },
+        { label: "Agent landscape", href: "courses/a1-chatbots-to-agents.html" } ] },
+    { label: "What it\nactually does", href: "courses/a2-what-workbuddy-does.html", color: "#34D399",
+      concepts: [
+        { label: "Four-stage loop", href: "courses/a2-what-workbuddy-does.html" },
+        { label: "Five task families", href: "courses/a2-what-workbuddy-does.html" } ] },
+    { label: "Where it\nfits", href: "courses/a3-where-it-fits.html", color: "#FBBF24",
+      concepts: [
+        { label: "Delegate vs DIY", href: "courses/a3-where-it-fits.html" },
+        { label: "Pilot shortlist", href: "courses/a3-where-it-fits.html" } ] },
+    { label: "Risk &\ngovernance", href: "courses/a4-risk-governance.html", color: "#FBBF24",
+      concepts: [
+        { label: "Permission layers", href: "courses/a4-risk-governance.html" },
+        { label: "Verify before use", href: "courses/a4-risk-governance.html" } ] },
+    { label: "Rollout\nplaybook", href: "courses/a5-rollout-playbook.html", color: "#FB923C",
+      concepts: [
+        { label: "Credits economics", href: "courses/a5-rollout-playbook.html" },
+        { label: "Admin Console", href: "courses/a5-rollout-playbook.html" } ] },
+    { label: "Value &\nroadmap", href: "courses/a6-value-roadmap.html", color: "#FB923C",
+      concepts: [
+        { label: "Real metrics", href: "courses/a6-value-roadmap.html" },
+        { label: "When to scale", href: "courses/a6-value-roadmap.html" } ] },
+    { label: "Install +\nfirst task", href: "courses/b1-install-first-task.html", color: "#34D399",
+      concepts: [
+        { label: "The loop", href: "courses/b1-install-first-task.html" },
+        { label: "One-project rule", href: "courses/b1-install-first-task.html" } ] },
+    { label: "Instruction\ncraft", href: "courses/b2-instruction-craft.html", color: "#34D399",
+      concepts: [
+        { label: "Five levers", href: "courses/b2-instruction-craft.html" },
+        { label: "The scorecard", href: "courses/b2-instruction-craft.html" } ] },
+    { label: "Data\nanalysis", href: "courses/b3-data-analysis.html", color: "#FBBF24",
+      concepts: [
+        { label: "Excel to insight", href: "courses/b3-data-analysis.html" },
+        { label: "Pack artifact 1", href: "courses/b3-data-analysis.html" } ] },
+    { label: "Research\n& reports", href: "courses/b4-research-reports.html", color: "#FBBF24",
+      concepts: [
+        { label: "Multi-source", href: "courses/b4-research-reports.html" },
+        { label: "Real matrices", href: "courses/b4-research-reports.html" } ] },
+    { label: "Expert\nCenter", href: "courses/b5-expert-center.html", color: "#FBBF24",
+      concepts: [
+        { label: "100+ Experts", href: "courses/b5-expert-center.html" },
+        { label: "Launch deck", href: "courses/b5-expert-center.html" } ] },
+    { label: "Skills &\nmarketplace", href: "courses/b6-skill-marketplace.html", color: "#FB923C",
+      concepts: [
+        { label: "Custom skills", href: "courses/b6-skill-marketplace.html" },
+        { label: "Security scanning", href: "courses/b6-skill-marketplace.html" } ] },
+    { label: "Connec-\ntors", href: "courses/b7-connectors.html", color: "#FB923C",
+      concepts: [
+        { label: "Drive · Gmail · Notion", href: "courses/b7-connectors.html" },
+        { label: "MCP pattern", href: "courses/b7-connectors.html" } ] },
+    { label: "Auto-\nmation", href: "courses/b8-automation.html", color: "#FB923C",
+      concepts: [
+        { label: "Scheduled runs", href: "courses/b8-automation.html" },
+        { label: "Briefing to Slack", href: "courses/b8-automation.html" } ] },
+    { label: "Remote +\nmemory", href: "courses/b9-remote-bot-memory.html", color: "#F87171",
+      concepts: [
+        { label: "Phone trigger", href: "courses/b9-remote-bot-memory.html" },
+        { label: "Memory defaults", href: "courses/b9-remote-bot-memory.html" } ] },
+    { label: "Capstone\n10/10", href: "courses/b10-capstone-ship.html", color: "#F87171",
+      concepts: [
+        { label: "Verify discipline", href: "courses/b10-capstone-ship.html" },
+        { label: "Pack ships", href: "courses/b10-capstone-ship.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

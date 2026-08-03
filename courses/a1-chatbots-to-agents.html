@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 1 · From chatbots to agents - learn workbuddy with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-workbuddy-with-phoebe</a> / Leader session 1 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe · Leader track · Session 1 of 6</div>
+    <h1>From chatbots to <span class="accent">agents</span></h1>
+    <p class="sub">Your team already uses AI that answers. A new class of AI executes: it takes one plain-language instruction, plans the steps, works the files on a computer, and hands back a finished deliverable. Tencent's WorkBuddy - launched in China in March 2026, global from May 2026 - is one of the clearest examples of this class. This session strips the hype and keeps the stakes: what execution AI actually is, where it sits in the 2026 landscape, and why it changes the question you manage - from "is my team using AI?" to "are my team's instructions and verification any good?". You never open the tool in this track. You decide about it.</p>
+    <div class="chip-row">
+      <span class="chip level">🤝 Leader track</span>
+      <span class="chip audience">C-level · managers · team leads</span>
+      <span class="chip audience">No tool needed - decide-and-govern mode</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:5">3-25 · Assistive vs execution + the landscape</span>
+      <span class="a3" style="flex:4">25-42 · Exercise: the agent-shaped audit</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How the leader track works</h2>
+    </div>
+    <p class="lede">Six sessions, all in <strong>deciding mode</strong>: you never install anything, never type an instruction, never touch a setting. Instead you build the judgment that surrounds the tool - what it is (a1-a2), where it fits your team (a3), what the risks are and how they are contained (a4), how to roll it out (a5), and how to know whether it paid off (a6). Every session ends the same way: with questions to take back and ask your team, because the answers you need live with the people doing the work. If a session makes you curious enough to try the tool yourself, the operator track (b1-b10) is the hands-on door.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">◐ Exercise - pen and paper, no tool</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A one-sentence definition of execution AI you can say in a board meeting, a mental map of the 2026 agent landscape with WorkBuddy placed on it, the new management question written in your own words - and a five-task audit of your team's last week, marked for which tasks are agent-shaped.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: ASSISTIVE VS EXECUTION ============ -->
+  <section class="section" id="assistive-vs-execution">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers Tencent's "you say, it does" positioning, capability guide framing</span>
+      <h2>Assistive vs execution AI <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">Tencent's four-word framing - <em>"you say, it does"</em> - is the whole shift. Assistive AI (a chatbot) gives your team advice about the work: how to structure the report, what formula to use, five steps they could take. Execution AI gives your team the work: the report itself, the merged spreadsheet, the renamed folder - as a file, with a record of what changed. The official line captures it: <em>"Not just answers. Finished work."</em> The difference sounds small and changes everything downstream: cost per deliverable, where errors hide, and what you as a leader have to govern.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Side-by-side contrast: a chatbot returns advice the human still has to execute; an execution agent returns a finished file plus an audit trail.">
+        <style>
+          .cvT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .cvS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .cvH { font: 700 12px Inter, sans-serif; fill: #64748B; letter-spacing: 1px; }
+          .cvN { font: 600 13px Inter, sans-serif; fill: #013340; }
+        </style>
+        <text class="cvH" x="30" y="36">THE CHATBOT (ASSISTIVE)</text>
+        <text class="cvH" x="470" y="36">THE EXECUTION AGENT</text>
+        <rect x="30" y="48" width="390" height="188" rx="10" fill="#64748B"/>
+        <text class="cvT" x="50" y="76">You: "How do I summarize Q2 sales?"</text>
+        <text class="cvS" x="50" y="102">"Here are five steps you could take:</text>
+        <text class="cvS" x="50" y="122">1. Open your spreadsheet and clean the data</text>
+        <text class="cvS" x="50" y="142">2. Build a pivot table by product line</text>
+        <text class="cvS" x="50" y="162">3. Chart the trend, then write it up..."</text>
+        <text class="cvT" x="50" y="196">→ advice arrives. The work is still yours.</text>
+        <text class="cvS" x="50" y="218">Your team executes every step by hand.</text>
+        <rect x="470" y="48" width="390" height="188" rx="10" fill="#0052D9"/>
+        <text class="cvT" x="490" y="76">You: "Build a one-page Q2 sales summary</text>
+        <text class="cvS" x="490" y="96">from the files in the Q2 folder."</text>
+        <rect x="490" y="112" width="350" height="46" rx="8" fill="#003BA3"/>
+        <text class="cvT" x="506" y="132">📄 q2-summary.docx</text>
+        <text class="cvS" x="506" y="150">headline number · chart · three findings</text>
+        <text class="cvS" x="490" y="180">+ an audit trail of every change it made</text>
+        <text class="cvT" x="490" y="206">→ the work arrives finished.</text>
+        <text class="cvS" x="490" y="226">Your team verifies, then uses it.</text>
+        <rect x="30" y="262" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="cvN" x="54" y="274">Assistive AI compresses thinking time. Execution AI compresses doing time - the larger share of most office work.</text>
+        <rect x="30" y="294" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="cvN" x="54" y="306">The chatbot's errors surface while your person does the steps. The agent's errors hide inside a polished file.</text>
+        <rect x="30" y="326" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="cvN" x="54" y="338">That is why verification is a leader topic, not a technical one - it is the whole of session a4.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - same request, two different products back: advice vs a deliverable</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why "execution-driven" changes the management question<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>With chatbots, the management question was <strong>adoption</strong>: are people using it, is anyone pasting confidential data where they should not. With execution agents the question moves, because the agent now does work that ships:</p>
+        <ul>
+          <li><strong>You now manage instructions.</strong> The quality of what the agent produces tracks the quality of what your people ask for. A vague instruction produces a polished deliverable about the wrong thing. Instruction craft is a trainable team skill - the operator track's b2 teaches it with a live simulator.</li>
+          <li><strong>You now manage verification.</strong> A finished-looking file invites trust it has not earned yet. The team norm you need is simple and non-negotiable: nothing an agent produced leaves the building unverified. a4 turns this into a governance checklist.</li>
+          <li><strong>Adoption still matters - but differently.</strong> The risk is no longer "nobody uses it"; it is "people use it on the wrong tasks, or trust it too fast." a3 gives you the triage; a6 gives you the metrics.</li>
+        </ul>
+        <p>One sentence to keep: <em>you used to manage people who did the work; now you also manage the instructions and checks around an agent that does some of it.</em></p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE 2026 LANDSCAPE ============ -->
+  <section class="section" id="landscape">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers TechNode launch coverage, PR Newswire (SuperAI 2026)</span>
+      <h2>The 2026 agent landscape <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Three product classes now share the "AI at work" label, and conflating them is how rollouts go wrong. Chatbots answer. Copilots assist inside one app. Desktop execution agents - the OpenClaw-like class WorkBuddy belongs to - plan and act across your computer: files, documents, spreadsheets, schedules. WorkBuddy launched in China in March 2026, went global in May 2026 at SuperAI Singapore, and runs multiple models under the hood - Hunyuan, DeepSeek, GLM, Kimi, MiniMax - so the model is not the thing you manage. The instruction is.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Landscape map: chatbots answer, copilots assist inside one app, desktop execution agents act across the computer; WorkBuddy sits in the third class with its launch timeline.">
+        <style>
+          .lmT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .lmS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .lmX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .lmN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .lmWire { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#lmHd); }
+        </style>
+        <defs>
+          <marker id="lmHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <rect x="40" y="60" width="240" height="120" rx="10" fill="#64748B"/>
+        <text class="lmT" x="58" y="88">CHATBOTS</text>
+        <text class="lmS" x="58" y="110">answer questions, draft text</text>
+        <text class="lmS" x="58" y="128">no hands on your files</text>
+        <text class="lmS" x="58" y="150">you execute everything</text>
+        <rect x="320" y="60" width="240" height="120" rx="10" fill="#2E7CF6"/>
+        <text class="lmT" x="338" y="88">COPILOTS IN APPS</text>
+        <text class="lmS" x="338" y="110">assist inside one tool</text>
+        <text class="lmS" x="338" y="128">suggestions in your doc, sheet</text>
+        <text class="lmS" x="338" y="150">you still drive every step</text>
+        <rect x="600" y="60" width="240" height="120" rx="10" fill="#003BA3"/>
+        <text class="lmT" x="618" y="88">DESKTOP EXEC AGENTS</text>
+        <text class="lmS" x="618" y="110">plan + act across the computer</text>
+        <text class="lmS" x="618" y="128">files, docs, sheets, schedules</text>
+        <text class="lmS" x="618" y="150">OpenClaw-like product class</text>
+        <rect x="600" y="196" width="240" height="88" rx="10" fill="#0087A8"/>
+        <text class="lmT" x="618" y="222">WORKBUDDY (Tencent)</text>
+        <text class="lmS" x="618" y="244">China launch Mar 2026</text>
+        <text class="lmS" x="618" y="262">global May 2026 · SuperAI SG</text>
+        <path class="lmWire" d="M720,180 L720,192"/>
+        <path class="lmWire" d="M60,310 L840,310"/>
+        <text class="lmX" x="60" y="332">answers you</text>
+        <text class="lmX" x="740" y="332">acts for you</text>
+        <text class="lmX" x="330" y="332">the axis that matters: who executes</text>
+        <rect x="40" y="352" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="lmN" x="64" y="364">Multi-model under the hood: Hunyuan · DeepSeek · GLM · Kimi · MiniMax. You manage the instruction, not the model.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three product classes on one axis: who does the executing</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Honest limits - what independent reviews agree on<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Before anyone on your team over-promises, read the edges. Independent 2026 reviews and Tencent's own materials converge on four:</p>
+        <ul>
+          <li><strong>Outputs need verification before external use.</strong> The agent delivers finished-looking work; finished-looking is not the same as correct. This is limit number one in every serious review, and the founding reason for session a4.</li>
+          <li><strong>The global edition is young.</strong> Worldwide launch was May 2026; international support and some features still lag the China edition, and UI names drift between updates. Where this course could drift with them, we say "re-verify at workbuddy.ai" - do the same in anything you present.</li>
+          <li><strong>Advanced setups have real complexity.</strong> Connectors and custom skills take patience the first time; budget pilot time for it rather than assuming day-one magic.</li>
+          <li><strong>It executes; it does not decide.</strong> What is worth doing, for whom, to what standard - that judgment stays with your team. An agent amplifies a well-run team and amplifies a confused one too.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ EXERCISE ============ -->
+  <section class="section" id="exercise-audit">
+    <div class="section-kicker">
+      <span class="klabel">Exercise · pen and paper</span>
+      <h2>The agent-shaped audit <span class="tag exercise">◐ 15 min · no tool</span></h2>
+    </div>
+    <p class="lede">Deciding mode means deciding about your team's actual work, not about demos. This exercise takes fifteen minutes and produces the raw material for sessions a3 and a5.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>List five tasks</strong> your team actually did last week. Real ones, with names: "Mei consolidated the three regional sales files", not "reporting". Small is fine; weekly chores are gold.</p></div>
+      <div class="step"><p><strong>Mark each task against three tests.</strong> Agent-shaped tasks pass all three: <em>describable</em> (you could write the ask in two sentences), <em>file-bound</em> (inputs and output are documents, spreadsheets, folders), <em>checkable</em> (someone could verify the result in minutes, not hours).</p></div>
+      <div class="step"><p><strong>Count the marks.</strong> Most teams find two or three of five are agent-shaped. If you found zero, your list is probably too abstract - go one level more concrete and try again.</p></div>
+      <div class="step"><p><strong>Keep the sheet.</strong> a3 turns it into a delegate-vs-DIY triage; a5 picks the pilot from it. This one page of paper outperforms any vendor deck you will be shown this year.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Why start with tasks, not tools.</strong> Teams that start from "we bought an agent, find uses for it" stall; teams that start from "here are our five most repetitive file-bound chores" ship value in week one. The audit is the difference - and it costs nothing.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session a2 - and questions to ask your team <span class="tag exercise">◐ 20 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the agent-shaped audit if you did not in session - five real tasks, three tests each. Bring the sheet to a2.</li>
+      <li>Write the one-sentence definition of execution AI in your own words, out loud, until it survives without notes. You will use it with your board sooner than you think.</li>
+      <li>Ask your team this week - and listen more than you explain:
+        <ul>
+          <li>"Which task last week felt like following a recipe - the steps were obvious, only the doing took time?"</li>
+          <li>"Where do you already ask a chatbot for advice, and then do all the manual work anyway?"</li>
+          <li>"What deliverable do we produce every single week that nobody enjoys making?"</li>
+        </ul>
+      </li>
+      <li>Optional: skim one piece of the launch coverage (TechNode's March and May 2026 pieces are the crispest) so the timeline in Part 2 is yours, not mine.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This course teaches from public documentation and verified coverage - no official Tencent certification is claimed. WorkBuddy is a fast-moving product (global launch May 2026): names, plans and features drift, so re-verify at workbuddy.ai before you present any of this. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">TechNode launch coverage (2026-03-09 China launch, 2026-05-29 global)</span><span class="note">Timeline, OpenClaw-like positioning, multi-model support · taught in Part 2</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PR Newswire - Tencent Cloud unveils WorkBuddy + Miora (SuperAI 2026)</span><span class="note">Global positioning, SEA rollout, "execution-driven" framing · Parts 1-2</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Tencent Cloud - "AI Agent for Business Automation: What WorkBuddy Can Do"</span><span class="note">Contract framing only here; a2 teaches the loop and task families from it</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Independent review - Eigent "WorkBuddy AI Review (2026)"</span><span class="note">Honest limits in the self-study card; a6 uses its pricing + limits in depth</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Your team already uses a chatbot daily. What NEW capability does an execution agent add?</p>
+      <button class="qopt" type="button">A · Better-written answers to the same questions</button>
+      <button class="qopt" type="button">B · It executes: plans the steps, works the files, returns a finished deliverable with an audit trail</button>
+      <button class="qopt" type="button">C · It removes the need to check the output</button>
+      <p class="qwhy">"You say, it does." The chatbot compresses thinking time; the agent compresses doing time. And C is exactly backwards - a finished-looking file makes verification MORE important, not less.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · WorkBuddy's launch timeline, as you would state it to your board:</p>
+      <button class="qopt" type="button">A · China March 2026, global May 2026 at SuperAI Singapore - so the global edition is young</button>
+      <button class="qopt" type="button">B · Global-first launch in 2024, now a mature product everywhere</button>
+      <button class="qopt" type="button">C · Still China-only; no global edition exists</button>
+      <p class="qwhy">China-first in March 2026, global from May 2026 (SuperAI Singapore). The leader-relevant consequence: international support and features still lag the domestic edition, and details drift - re-verify at workbuddy.ai before you present.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">3 · What is the new management question that execution agents create?</p>
+      <button class="qopt" type="button">A · Which underlying model should we standardize on</button>
+      <button class="qopt" type="button">B · How many people have installed it</button>
+      <button class="qopt" type="button">C · Are our instructions sharp and is our verification discipline real</button>
+      <p class="qwhy">Multi-model switching (Hunyuan, DeepSeek, GLM, Kimi, MiniMax) makes the model a detail, and install counts were the chatbot-era metric. What you now manage is the quality of what goes in and the checking of what comes out.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The one-liner</b><span>Assistive AI gives advice about the work; execution AI gives you the work - a file, with an audit trail. "You say, it does."</span></div>
+      <div class="cheat-item"><b>The landscape</b><span>Chatbots answer → copilots assist inside one app → desktop execution agents act across the computer. One axis: who executes.</span></div>
+      <div class="cheat-item"><b>WorkBuddy's place</b><span>OpenClaw-like desktop execution agent from Tencent. China Mar 2026, global May 2026 (SuperAI Singapore).</span></div>
+      <div class="cheat-item"><b>Multi-model</b><span>Hunyuan · DeepSeek · GLM · Kimi · MiniMax under the hood. The model is a detail; the instruction is the lever.</span></div>
+      <div class="cheat-item"><b>The new question</b><span>Not "are they using AI?" but "are our instructions sharp, and is nothing leaving unverified?"</span></div>
+      <div class="cheat-item"><b>Where errors hide</b><span>Chatbot errors surface while your person does the steps. Agent errors hide inside a polished file - hence a4.</span></div>
+      <div class="cheat-item"><b>Agent-shaped test</b><span>Describable in two sentences · file-bound in and out · checkable in minutes. Two or three of five weekly tasks usually pass.</span></div>
+      <div class="cheat-item"><b>Honest limits</b><span>Verify before external use · young global edition, features drift · advanced setup takes patience · it executes, you decide.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 1 of 6 · learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a2-what-workbuddy-does.html">Next: What WorkBuddy actually does →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operator session 7 · Connectors - learn workbuddy with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-workbuddy-with-phoebe</a> / Operator session 7 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe · Operator track · Session 7 of 10</div>
+    <h1>Wiring <span class="accent">connectors</span></h1>
+    <p class="sub">Until tonight, WorkBuddy could only see one folder: ~/Documents/Meridian. Connectors change that. They are pluggable tools and data sources - Google Drive, Gmail, Notion, Slack, GitHub, Jira, Confluence, plus web search - that the agent calls on demand, following the MCP pattern. You will wire exactly one, minimally, then run the first task in this course that pulls from two sources at once: a market report in Drive and this week's numbers on disk, merged into one Meridian update. And because every connector is a new data surface, you will revisit Data Management before you leave.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Operator track</span>
+      <span class="chip audience">Office professionals: analysts · marketers · ops · anyone with deadlines</span>
+      <span class="chip audience">Hands-on · budget a real hour for first-time setup</span>
+      <span class="chip time">Builds on b1's boundary + b2's Context lever</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-16 · Connectors + what they change</span>
+      <span class="a3" style="flex:5">16-42 · Build-along: wire one + cross-source task</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this session sits</h2>
+    </div>
+    <p class="lede">b1 drew the boundary: one folder, plan confirmation, sandbox. b2 taught the <strong>Context + files</strong> lever: the agent can only be as good as what it can reach. Tonight the reach itself grows. A connector extends the Context lever beyond your folders - into the Drive folder your team actually works in, the Notion wiki, the Slack channel, the inbox. The skill is the same as b1's folder rule, applied at cloud scale: connect exactly what a real task needs, and know what each wire changes about your data picture.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Build-along - everyone does it</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      One connector wired with minimal scope, one digest produced from cloud files, and one cross-source deliverable - Drive report + local numbers, merged in a single instruction. Plus the rule that keeps connectors from becoming chaos: a connector is justified by a recurring task, never by "might be useful".
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT CONNECTORS ARE ============ -->
+  <section class="section" id="what-connectors-are">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers workbuddy.ai docs "Connectors", Tencent Cloud capability guide</span>
+      <h2>Pluggable tools the agent calls on demand <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A connector is not an import and not a sync. It is a live tool the agent can call <em>during a task</em>, when the plan needs it - "read that Drive folder", "search the Notion space", "check the Jira board". This is the MCP pattern: pluggable tools and data sources behind one standard interface, so the same instruction habits you built in b2 work unchanged - only the reachable world gets bigger. The documented set: <strong>GitHub, Jira, Confluence, Google Drive, Gmail, Notion, Slack</strong>, plus <strong>web search</strong> and the <strong>local file system</strong> you have been using since b1.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WorkBuddy as a hub: local files inside the local boundary, seven cloud connectors plus web search on the other side of a dashed local-versus-cloud line, each called on demand.">
+        <style>
+          .cnT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .cnS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .cnX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .cnN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .cnWire { stroke: #0052D9; stroke-width: 2; fill: none; marker-end: url(#cnHd); }
+        </style>
+        <defs>
+          <marker id="cnHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <text class="cnX" x="40" y="30">LOCAL - on your machine</text>
+        <text class="cnX" x="470" y="30">CLOUD - behind an account you authorize</text>
+        <line x1="440" y1="14" x2="440" y2="300" stroke="#64748B" stroke-width="2" stroke-dasharray="7 6"/>
+        <rect x="40" y="110" width="180" height="64" rx="10" fill="#003BA3"/>
+        <text class="cnT" x="58" y="138">WORKBUDDY</text>
+        <text class="cnS" x="58" y="158">the hub - calls tools</text>
+        <rect x="40" y="210" width="180" height="52" rx="8" fill="#1E293B"/>
+        <text class="cnT" x="58" y="232">LOCAL FILES</text>
+        <text class="cnS" x="58" y="250">~/Documents/Meridian</text>
+        <path class="cnWire" d="M130,174 L130,205"/>
+        <rect x="480" y="52" width="170" height="46" rx="8" fill="#0052D9"/>
+        <text class="cnT" x="496" y="72">GOOGLE DRIVE</text>
+        <text class="cnS" x="496" y="90">shared docs + sheets</text>
+        <rect x="680" y="52" width="170" height="46" rx="8" fill="#0052D9"/>
+        <text class="cnT" x="696" y="72">GMAIL</text>
+        <text class="cnS" x="696" y="90">the inbox surface</text>
+        <rect x="480" y="114" width="170" height="46" rx="8" fill="#0052D9"/>
+        <text class="cnT" x="496" y="134">NOTION</text>
+        <text class="cnS" x="496" y="152">wiki + databases</text>
+        <rect x="680" y="114" width="170" height="46" rx="8" fill="#0052D9"/>
+        <text class="cnT" x="696" y="134">SLACK</text>
+        <text class="cnS" x="696" y="152">channels + threads</text>
+        <rect x="480" y="176" width="170" height="46" rx="8" fill="#2E7CF6"/>
+        <text class="cnT" x="496" y="196">GITHUB</text>
+        <text class="cnS" x="496" y="214">repos + issues</text>
+        <rect x="680" y="176" width="170" height="46" rx="8" fill="#2E7CF6"/>
+        <text class="cnT" x="696" y="196">JIRA · CONFLUENCE</text>
+        <text class="cnS" x="696" y="214">tickets + team docs</text>
+        <rect x="480" y="238" width="370" height="46" rx="8" fill="#0087A8"/>
+        <text class="cnT" x="496" y="258">WEB SEARCH</text>
+        <text class="cnS" x="496" y="276">the open web, on demand - no account to wire</text>
+        <path class="cnWire" d="M220,128 C360,110 400,84 475,76"/>
+        <path class="cnWire" d="M220,138 C360,132 400,134 475,137"/>
+        <path class="cnWire" d="M220,150 C360,164 400,192 475,199"/>
+        <path class="cnWire" d="M220,162 C340,210 390,254 475,261"/>
+        <text class="cnX" x="248" y="106">called on demand, mid-task</text>
+        <rect x="40" y="322" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="cnN" x="64" y="334">MCP pattern: one standard interface, many pluggable tools. Your instruction habits do not change - the reach does.</text>
+        <rect x="40" y="354" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="cnN" x="64" y="366">Every wire crossing the dashed line is an authorization YOU grant - and a data surface you now own (Part 2).</text>
+        <rect x="40" y="386" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="cnN" x="64" y="398">Local files stay a first-class source. Connectors add reach; they do not replace the Meridian folder.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the hub, the spokes, and the local-vs-cloud boundary every connector crosses</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Which connector for which chore<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Map the connector to the task family it unlocks - this is your wiring menu, and the test for whether a connector deserves to exist on your machine:</p>
+        <ul>
+          <li><strong>Google Drive</strong> - the team's shared docs and sheets become reachable context for reports and analysis. The most common first wire for office work.</li>
+          <li><strong>Gmail</strong> - summarize, extract, draft from the inbox. Highest value, most sensitive surface - wire it last, not first.</li>
+          <li><strong>Notion</strong> - wikis and databases as source material; also a fine first wire if your team lives there instead of Drive.</li>
+          <li><strong>Slack</strong> - pull thread context in; and in b8 it becomes the delivery channel scheduled tasks push to.</li>
+          <li><strong>GitHub · Jira · Confluence</strong> - the engineering-adjacent trio: issues, tickets, team docs. Wire only if your recurring chore actually reads them.</li>
+          <li><strong>Web search</strong> - already there, no account needed - it powered b4's research session.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why "on demand" matters more than it sounds<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Because a connector is a tool call inside the four-stage loop, it inherits every safeguard you already know: the <strong>plan</strong> shows which sources a task will touch before anything runs, and the <strong>audit trail</strong> records what was actually read. Read the plan with new eyes from tonight on - the question is no longer just "right files?" but "right <em>sources</em>?". If a plan reaches for Gmail on a task that only needed the Meridian folder, that is your cue to stop, not confirm. The gate from b1 does not move; the traffic through it grows.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: WHAT EACH CONNECTOR CHANGES ============ -->
+  <section class="section" id="what-changes">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers Data Management docs, independent review notes on setup complexity</span>
+      <h2>Reachable context grows - so does the data picture <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Two things happen with every wire, and they are not the same thing. First, the good one: your <strong>Context lever from b2 extends beyond your folders</strong> - instructions can now name a Drive folder or a Notion space the way they named local files, and results get better for the same reason scoped folders beat guessing. Second, the one to manage: <strong>the data picture changes per-connector</strong>. b1's honest selling point - the desktop app works on local files without a mandatory cloud upload - stops being the whole story the moment Drive or Gmail is wired. Cloud sources flow through cloud services. That is not a scandal; it is a fact you govern. The rule: <em>every time you connect something, revisit Data Management.</em></p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Before and after reachable-context map: before b7 the agent reaches one local folder plus web search; after b7 it also reaches Drive and Notion, and each added source is a new data surface to govern.">
+        <style>
+          .rcT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .rcS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .rcH { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .rcX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .rcN { font: 600 13px Inter, sans-serif; fill: #013340; }
+        </style>
+        <text class="rcH" x="40" y="34">BEFORE b7 - reachable context</text>
+        <rect x="40" y="50" width="360" height="200" rx="12" fill="none" stroke="#64748B" stroke-width="2" stroke-dasharray="6 5"/>
+        <rect x="64" y="74" width="200" height="52" rx="8" fill="#1E293B"/>
+        <text class="rcT" x="80" y="96">MERIDIAN FOLDER</text>
+        <text class="rcS" x="80" y="114">local, authorized in b1</text>
+        <rect x="64" y="146" width="200" height="52" rx="8" fill="#0087A8"/>
+        <text class="rcT" x="80" y="168">WEB SEARCH</text>
+        <text class="rcS" x="80" y="186">public web only</text>
+        <text class="rcX" x="64" y="228">small, fully local-first, easy to reason about</text>
+        <text class="rcH" x="480" y="34">AFTER b7 - reachable context</text>
+        <rect x="480" y="50" width="360" height="200" rx="12" fill="none" stroke="#0052D9" stroke-width="2.5"/>
+        <rect x="500" y="66" width="152" height="48" rx="8" fill="#1E293B"/>
+        <text class="rcT" x="514" y="87">MERIDIAN</text>
+        <text class="rcS" x="514" y="105">local folder</text>
+        <rect x="668" y="66" width="152" height="48" rx="8" fill="#0087A8"/>
+        <text class="rcT" x="682" y="87">WEB SEARCH</text>
+        <text class="rcS" x="682" y="105">public web</text>
+        <rect x="500" y="128" width="152" height="48" rx="8" fill="#0052D9"/>
+        <text class="rcT" x="514" y="149">DRIVE FOLDER</text>
+        <text class="rcS" x="514" y="167">team's shared docs</text>
+        <rect x="668" y="128" width="152" height="48" rx="8" fill="#0052D9"/>
+        <text class="rcT" x="682" y="149">NOTION SPACE</text>
+        <text class="rcS" x="682" y="167">wiki, if wired</text>
+        <text class="rcX" x="500" y="212">bigger reach = better context lever...</text>
+        <text class="rcX" x="500" y="232">...and two new data surfaces to govern</text>
+        <rect x="40" y="286" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="rcN" x="64" y="298">The Context lever now takes cloud names: "the market report in Drive:/Meridian-MY" works like a local filename.</text>
+        <rect x="40" y="318" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="rcN" x="64" y="330">Local-first is no longer the whole story: wired sources flow through their cloud services. Know which ones do.</text>
+        <rect x="40" y="350" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="rcN" x="64" y="362">Standing habit from tonight: connect a source, then open Data Management and re-read what is stored where.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same boundary thinking as b1, redrawn after the first wire goes in</figcaption>
+    </figure>
+
+    <div class="callout warn">
+      <strong>⚠ Connector sprawl is folder sprawl at cloud scale</strong>
+      In b1 you refused to authorize your whole home directory. Apply the identical discipline here: wire what a real, recurring task needs - nothing speculative. Every idle connector is reach you granted for no deliverable: a bigger surface in every plan you skim, a wider blast radius when an instruction is misread, and one more line in the data picture you are supposed to be able to explain. One chore, one connector. "Might be useful someday" is how boundaries die.
+    </div>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Honesty rail: drift + first-time friction<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two honest edges, both documented. First, <strong>the connector list drifts</strong> - WorkBuddy is a fast-moving product (global launch May 2026), and the set named on this page is what the docs listed when this course was built. Re-verify the actual names in-app and at workbuddy.ai before you rely on any of them. Second, <strong>setup has real first-time complexity</strong> - independent reviews flag exactly this, and they are right: OAuth screens, scope pickers, and account choices take patience the first time. Budget an hour for your first wire, not ten minutes. The second connector takes a quarter of that.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ BUILD-ALONG 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along 1 of 2 · the Slack/Google integrations practice case</span>
+      <h2>Wire one connector, minimally <span class="tag demo">★ 12 min · everyone does it</span></h2>
+    </div>
+    <p class="lede">Google Drive if your team lives in Docs and Sheets, Notion if it lives in a wiki - pick ONE. The point is the pattern, not the catalog.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Open Connectors</strong> in WorkBuddy's settings and pick Google Drive (or Notion). You will be handed to the provider's own authorization screen - this consent belongs to the provider, not to WorkBuddy.</p></div>
+      <div class="step"><p><strong>Authorize minimally.</strong> Where the provider offers a scope choice, grant the narrowest that works - a single folder or space, read access, one account. This is b1's one-project rule crossing the dashed line.</p></div>
+      <div class="step"><p><strong>Stage a test folder.</strong> In Drive, make a folder like <code>Meridian-MY</code> and drop in three real files - a doc, a sheet, anything genuinely yours. Real material, not toys, same as b1.</p></div>
+      <div class="step"><p><strong>Run the digest task:</strong> <em>"Summarize the three newest files in Drive:/Meridian-MY into one digest - one paragraph per file, plus one line on what they collectively say."</em> Read the plan: it should name the Drive source explicitly. Confirm, then open the deliverable.</p></div>
+      <div class="step"><p><strong>Close the loop:</strong> open Data Management and re-read it now that a cloud source is wired. Sixty seconds tonight; a standing habit forever.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ BUILD-ALONG 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Build-along 2 of 2 · Meridian running project</span>
+      <h2>The cross-source task <span class="tag demo">★ 10 min · everyone does it</span></h2>
+    </div>
+    <p class="lede">The first task in this course that no single source could answer - the real reason connectors exist. Meridian's market report (b4's artifact, now sitting in the shared Drive folder) meets this week's numbers in the local folder, in one instruction.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Stage the two sources.</strong> Put the b4 market report in <code>Drive:/Meridian-MY</code>; confirm this week's sales file is in <code>~/Documents/Meridian</code>. Two sources, either side of the boundary.</p></div>
+      <div class="step"><p><strong>Run the five-lever instruction:</strong> <em>"Pull the Malaysia market report from Drive:/Meridian-MY and this week's sales numbers from ~/Documents/Meridian, and combine them into a one-page Meridian update for Monday's leadership sync: top three market signals from the report, this week's numbers against them, one recommendation. Verify every figure against its source file before delivering."</em></p></div>
+      <div class="step"><p><strong>Read the plan as a sources list.</strong> It should show both the Drive read and the local read before anything runs. That is the b1 gate doing its new, bigger job.</p></div>
+      <div class="step"><p><strong>Check the seams in the deliverable.</strong> Cross-source work fails at the joins - a report figure attributed to the sales file, or the reverse. Skim the audit trail for which source fed which claim. b2's currency trap taught you why: the S$102,947 vs S$89,715.03 disaster was two sources joined without a check.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>This pattern is most office work.</strong> Brief in the wiki + numbers in a sheet; contract in Drive + terms in an email thread; ticket in Jira + spec in Confluence. "Two sources, one deliverable" is the shape of the job - which is exactly why the connector you wire should be the one your recurring version of this pattern actually needs.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Name the one recurring chore from your real week that needs a source beyond your folders - then wire <strong>that connector and only that one</strong>, minimally scoped. If no chore needs one, wire nothing: that is a correct b7 result.</li>
+      <li>Run the cross-source pattern on your own files: one cloud source + one local file, one deliverable, verify ask included. Save the instruction - it is a template you will reuse weekly.</li>
+      <li>Open Data Management and write down, in one sentence per wired connector, where that data flows. If you cannot write the sentence, unwire it until you can.</li>
+      <li>Re-verify the connector names in-app against this page - the list drifts, and noticing the drift is part of the skill.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This course teaches the working core of the official WorkBuddy documentation and Tencent Cloud's guides, cross-checked against independent coverage. WorkBuddy is a fast-moving product (global launch May 2026) - connector lists drift especially fast, so re-verify at workbuddy.ai. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - "What WorkBuddy Can Do": integrations (GitHub, Jira, Confluence, Google Drive, Gmail, Notion, Slack)</span><span class="note">The documented connector set · taught in Part 1</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WorkBuddy docs - Connectors feature + Slack/Google integrations practice case</span><span class="note">Wiring pattern + digest task · Build-along 1</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WorkBuddy docs - Data Management</span><span class="note">The per-connector data picture · Part 2's standing habit</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Eigent independent review (2026) - setup complexity as a documented limitation</span><span class="note">The honesty rail: budget an hour for the first wire</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What is a connector, in the MCP-pattern sense this page teaches?</p>
+      <button class="qopt" type="button">A · A one-time import that copies cloud files into your local folder</button>
+      <button class="qopt" type="button">B · A background sync that mirrors your Drive onto your disk</button>
+      <button class="qopt" type="button">C · A pluggable tool the agent calls on demand, mid-task, when the plan needs that source</button>
+      <p class="qwhy">No copy, no mirror - a live tool call inside the four-stage loop. That is why the plan screen and the audit trail still cover it: connector reads show up as steps you approve and actions you can review.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · You wire Google Drive tonight. What must change in how you think about data?</p>
+      <button class="qopt" type="button">A · Local-first stops being the whole story - the wired source flows through its cloud service, so revisit Data Management</button>
+      <button class="qopt" type="button">B · Nothing - the desktop app is local-first, so everything stays on your machine forever</button>
+      <button class="qopt" type="button">C · Everything - once any connector exists, local files are uploaded too</button>
+      <p class="qwhy">Per-connector, not all-or-nothing. Local files stay local; the wired cloud source flows through its service. The habit: connect a source, open Data Management, re-read the picture.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Which connector should you wire this week?</p>
+      <button class="qopt" type="button">A · All of them while you are in the settings anyway - saves time later</button>
+      <button class="qopt" type="button">B · The one your real recurring chore needs - and none, if no chore needs one</button>
+      <button class="qopt" type="button">C · Gmail first, since the inbox has the most valuable data</button>
+      <p class="qwhy">Connector sprawl is folder sprawl at cloud scale. One chore, one connector, minimal scope. And Gmail is the most sensitive surface - it goes last, behind a proven need, not first.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Operator session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>What a connector is</b><span>A pluggable tool + data source the agent calls on demand mid-task - the MCP pattern. Not an import, not a sync.</span></div>
+      <div class="cheat-item"><b>The documented set</b><span>GitHub · Jira · Confluence · Google Drive · Gmail · Notion · Slack, plus web search + local files. List drifts - re-verify in-app.</span></div>
+      <div class="cheat-item"><b>What it extends</b><span>The Context lever (b2) grows past your folders: "the report in Drive:/Meridian-MY" now works like a local filename.</span></div>
+      <div class="cheat-item"><b>What it changes</b><span>The data picture, per-connector. Local-first is no longer the whole story once Drive or Gmail is wired - revisit Data Management every time.</span></div>
+      <div class="cheat-item"><b>The sprawl rule</b><span>One recurring chore, one connector, minimal scope. Nothing speculative - idle connectors are boundary erosion.</span></div>
+      <div class="cheat-item"><b>The cross-source pattern</b><span>Two sources, one deliverable, verify ask on the joins - the shape of most office work, and the reason connectors exist.</span></div>
+      <div class="cheat-item"><b>The gate still holds</b><span>Plans now list sources, not just files. Read them as a sources list; a plan reaching for a source the task does not need is a stop, not a confirm.</span></div>
+      <div class="cheat-item"><b>Honest edges</b><span>First-time setup takes a real hour (documented) and connector names drift. Budget the hour; check the names.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Operator session 7 of 10 · learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b6-skill-marketplace.html">← Prev: Skill Marketplace</a> &nbsp;·&nbsp; <a href="b8-automation.html">Next: Automation + scheduling →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

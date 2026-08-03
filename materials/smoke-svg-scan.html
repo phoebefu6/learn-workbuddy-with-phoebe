@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>svg scan</title></head>
+<body>
+<pre id="out">scanning...</pre>
+<iframe id="fr" style="width:1200px;height:400px;visibility:hidden"></iframe>
+<script>
+const PAGES = ["a1-chatbots-to-agents","a2-what-workbuddy-does","a3-where-it-fits","a4-risk-governance","a5-rollout-playbook","a6-value-roadmap","b1-install-first-task","b2-instruction-craft","b3-data-analysis","b4-research-reports","b5-expert-center","b6-skill-marketplace","b7-connectors","b8-automation","b9-remote-bot-memory","b10-capstone-ship"];
+const fr = document.getElementById('fr'), out = document.getElementById('out');
+const results = {};
+let i = 0;
+function scanDoc(doc, name) {
+  const issues = [];
+  doc.querySelectorAll('figure.zoomable svg').forEach((svg, si) => {
+    const vb = svg.viewBox.baseVal;
+    svg.querySelectorAll('text').forEach(t => {
+      const b = t.getBBox();
+      if (b.x + b.width > vb.x + vb.width + 2) issues.push('svg' + si + ' RIGHT "' + t.textContent.slice(0,40) + '" ' + Math.round(b.x + b.width) + '>' + vb.width);
+      if (b.y + b.height > vb.y + vb.height + 2) issues.push('svg' + si + ' BOTTOM "' + t.textContent.slice(0,40) + '"');
+      if (b.x < vb.x - 2) issues.push('svg' + si + ' LEFT "' + t.textContent.slice(0,40) + '"');
+    });
+    // overlap: text baseline rows vs rects below them (bottom-note collision)
+    const texts = [...svg.querySelectorAll('text')].map(t => t.getBBox());
+    texts.forEach((a, ai) => texts.forEach((b, bi) => {
+      if (ai < bi && Math.abs(a.y - b.y) < a.height * 0.6 && a.x < b.x + b.width && b.x < a.x + a.width) {
+        const ta = svg.querySelectorAll('text')[ai], tb = svg.querySelectorAll('text')[bi];
+        issues.push('svg' + si + ' OVERLAP "' + ta.textContent.slice(0,20) + '"/"' + tb.textContent.slice(0,20) + '"');
+      }
+    }));
+  });
+  results[name] = {issues, journey: doc.querySelectorAll('.journey a').length, here: (doc.querySelector('.journey a.here')||{}).textContent, quiz: doc.querySelectorAll('.quiz-q').length, boxes: doc.querySelectorAll('.agentbox-ready').length, cheat: doc.querySelectorAll('.cheat-item').length};
+}
+function next() {
+  if (i >= PAGES.length) { out.textContent = 'DONE ' + JSON.stringify(results, null, 1); return; }
+  const name = PAGES[i++];
+  fr.onload = () => setTimeout(() => { try { scanDoc(fr.contentDocument, name); } catch(e) { results[name] = {error: String(e)}; } next(); }, 600);
+  fr.src = '../courses/' + name + '.html';
+}
+next();
+</script>
+</body></html>

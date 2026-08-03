@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 4 · Risk and governance - learn workbuddy with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-workbuddy-with-phoebe</a> / Leader session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe · Leader track · Session 4 of 6</div>
+    <h1>Risk and <span class="accent">governance</span></h1>
+    <p class="sub">a3 gave you a pilot shortlist. Before anyone runs it, tonight answers the two questions your CISO, your legal counsel and your own gut will ask: what can this agent touch, and where does our data go? The good news is that WorkBuddy ships with a governance surface built in - three permission layers, a local-first data model, a Data Management page, an editable private Memory. The leader's job is not to build controls from scratch; it is to know what to ask at each layer, set one non-negotiable shipping rule, and write it all down as an eight-question policy your team can actually follow. Still no tool opened - this is policy work.</p>
+    <div class="chip-row">
+      <span class="chip level">🤝 Leader track</span>
+      <span class="chip audience">C-level · managers · team leads</span>
+      <span class="chip audience">No tool needed - decide-and-govern mode</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:5">3-24 · Three layers + the data question</span>
+      <span class="a3" style="flex:4">24-42 · Write the governance checklist</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Governance is questions, not paranoia</h2>
+    </div>
+    <p class="lede">Agent risk conversations usually fail in one of two directions: blanket bans that push usage underground, or blanket enthusiasm that discovers the risk surface in a postmortem. The middle path is boring and it works: <strong>know the controls the product already has, decide who holds each one, and make the rules explicit before the pilot starts.</strong> Everything tonight comes from the official install guide, the capability guide and the product docs, cross-checked against independent reviews - and where the UI may have drifted since, the page says so.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Exercise - draft the policy tonight</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The three permission layers with a leader's question attached to each, a clear map of where data flows locally versus per-connector, one non-negotiable policy sentence (verify before external use - with the story that justifies it), and a drafted eight-question governance checklist ready for your team's WorkBuddy policy doc.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE THREE LAYERS ============ -->
+  <section class="section" id="permission-layers">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers folder authorization, plan confirmation, sandboxed execution + audit trail</span>
+      <h2>Three layers between an instruction and your files <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">Operators learn these layers as setup steps; leaders should read them as a <strong>governance surface</strong>. Each layer is a control the product provides and a discipline your team can keep or erode. The product default is safe; the risk is human - broad grants to escape prompts, rubber-stamped plans, audit trails nobody opens. So attach one question to each layer and ask it in every pilot review.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three permission layers with the leader question for each: folder authorization - which folders and who approves widening; plan confirmation - do people read plans or rubber-stamp; sandbox plus audit trail - who reviews the trail and on what cadence.">
+        <style>
+          .glT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .glS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .glQ { font: 700 13px Inter, sans-serif; fill: #013340; }
+          .glX { font: 400 11.5px Inter, sans-serif; fill: #64748B; }
+          .glN { font: 600 13px Inter, sans-serif; fill: #013340; }
+        </style>
+        <text class="glX" x="545" y="34">the leader's question, per layer:</text>
+        <rect x="40" y="44" width="480" height="66" rx="10" fill="#003BA3"/>
+        <text class="glT" x="60" y="72">LAYER 1 · FOLDER AUTHORIZATION</text>
+        <text class="glS" x="60" y="94">the agent sees only folders someone granted - nothing else exists to it</text>
+        <text class="glQ" x="545" y="72">Which folders are granted,</text>
+        <text class="glQ" x="545" y="92">and who approves widening?</text>
+        <rect x="40" y="130" width="480" height="66" rx="10" fill="#0052D9"/>
+        <text class="glT" x="60" y="158">LAYER 2 · PLAN CONFIRMATION</text>
+        <text class="glS" x="60" y="180">every task shows its steps first; nothing runs until a human approves</text>
+        <text class="glQ" x="545" y="158">Do people read the plans,</text>
+        <text class="glQ" x="545" y="178">or rubber-stamp them?</text>
+        <rect x="40" y="216" width="480" height="66" rx="10" fill="#2E7CF6"/>
+        <text class="glT" x="60" y="244">LAYER 3 · SANDBOX + AUDIT TRAIL</text>
+        <text class="glS" x="60" y="266">execution runs contained; every file change is recorded and reviewable</text>
+        <text class="glQ" x="545" y="244">Who reviews the trail,</text>
+        <text class="glQ" x="545" y="264">and on what cadence?</text>
+        <rect x="40" y="306" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="glN" x="64" y="318">The controls ship in the product. Governance is keeping them tight when convenience pushes the other way.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the built-in governance surface, read as a leader</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The one non-negotiable: verify before external use<span class="mini">6 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every source, official and independent, converges on one sentence: <strong>agent output needs verification before it leaves the building.</strong> Here is the story that turns that sentence into policy - it comes from the operator track's simulator (session b2), built on the course's running project:</p>
+        <p>Meridian, a Singapore tea brand, assembles a market-entry pack. The Malaysia pilot file is priced in <strong>MYR</strong>; the Singapore books are in <strong>SGD</strong>. The instruction was good - clear goal, right files, right format, right Expert. One clause was missing: a verify ask. The agent summed ringgit straight into Singapore dollars and delivered a pack totalling <strong>S$102,947.00</strong> - clean, formatted, confident, and wrong by 3.3x on the Malaysia line. With the verify clause on, the cross-foot check catches it: <strong>RM 18,985.00 converts to S$5,753.03</strong>, corrected total <strong>S$89,715.03</strong>, audit trail attached.</p>
+        <p>Read what that story is really saying to a leader:</p>
+        <ul>
+          <li><strong>The dangerous failure is silent.</strong> Wrong topic, missing data and bad formatting all announce themselves. An unverified number looks exactly like a verified one - until an investor checks it.</li>
+          <li><strong>The trap was in the data, not the tool.</strong> No vendor fix eliminates this class of error; a verification step surfaces it. That is why this is policy, not a product setting.</li>
+          <li><strong>The cost of the control is one sentence.</strong> "Cross-check every figure against the source and attach the audit trail" - one clause per instruction, plus a named human who owns the check for anything external.</li>
+        </ul>
+        <p>The policy line for your doc: <em>no agent-produced figure or document goes to a client, regulator, investor or the public without a named person verifying it against the audit trail.</em> Internal drafts move fast; external artifacts cross a gate. One rule, two speeds.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE DATA QUESTION ============ -->
+  <section class="section" id="data-question">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the local-first desktop model, Data Management, Memory, connectors</span>
+      <h2>Where does our data actually go? <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The question every security review opens with - and WorkBuddy's answer is unusually clean at the start: it is a <strong>desktop app that works on local files, with no mandatory cloud upload</strong> - one of its genuine differentiators. The picture changes the moment connectors enter: each connector (Google Drive, Gmail, Notion, Slack, GitHub, Jira) is its own data decision with its own flow. Govern the two paths separately and the conversation with your CISO gets much shorter.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two data paths: the local-first path where files, the WorkBuddy app and the deliverable stay on the laptop, and the opt-in connector path where Drive, Gmail, Notion and Slack each cross the boundary as a separate per-connector decision.">
+        <style>
+          .dfT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .dfS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .dfH { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .dfX { font: 400 11.5px Inter, sans-serif; fill: #64748B; }
+          .dfN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .dfW { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#dfHd); }
+        </style>
+        <defs>
+          <marker id="dfHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <rect x="30" y="46" width="400" height="216" rx="12" fill="none" stroke="#1E293B" stroke-width="2"/>
+        <text class="dfH" x="50" y="34">YOUR LAPTOP · the local-first path</text>
+        <rect x="50" y="70" width="150" height="52" rx="8" fill="#1E293B"/>
+        <text class="dfT" x="66" y="92">YOUR FILES</text>
+        <text class="dfS" x="66" y="110">authorized folders only</text>
+        <rect x="250" y="70" width="160" height="52" rx="8" fill="#0052D9"/>
+        <text class="dfT" x="266" y="92">WORKBUDDY APP</text>
+        <text class="dfS" x="266" y="110">desktop, sandboxed</text>
+        <rect x="50" y="180" width="360" height="52" rx="8" fill="#0087A8"/>
+        <text class="dfT" x="66" y="202">DELIVERABLE + AUDIT TRAIL</text>
+        <text class="dfS" x="66" y="220">lands back on the laptop - no mandatory cloud upload</text>
+        <path class="dfW" d="M200,96 L245,96"/>
+        <path class="dfW" d="M330,122 L330,175"/>
+        <line x1="480" y1="20" x2="480" y2="270" stroke="#64748B" stroke-width="2" stroke-dasharray="7 6"/>
+        <text class="dfH" x="520" y="34">CONNECTOR PATH · opt-in, per connector</text>
+        <rect x="520" y="56" width="150" height="42" rx="8" fill="#2E7CF6"/>
+        <text class="dfT" x="536" y="82">Drive · Gmail</text>
+        <rect x="690" y="56" width="150" height="42" rx="8" fill="#2E7CF6"/>
+        <text class="dfT" x="706" y="82">Notion · Slack</text>
+        <rect x="520" y="114" width="150" height="42" rx="8" fill="#2E7CF6"/>
+        <text class="dfT" x="536" y="140">GitHub · Jira</text>
+        <path class="dfW" d="M515,132 C470,132 450,110 415,100"/>
+        <text class="dfX" x="520" y="186">each connector opens its own flow across the</text>
+        <text class="dfX" x="520" y="204">boundary - approve them one by one, and note</text>
+        <text class="dfX" x="520" y="222">what data each moves before saying yes</text>
+        <rect x="30" y="296" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="dfN" x="54" y="308">Data Management page: what is stored, where, and how to clear it - review it once per quarter, per seat.</text>
+        <rect x="30" y="328" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="dfN" x="54" y="340">Memory: private to each user and editable - useful defaults, but tell people never to store client secrets in it.</text>
+        <rect x="30" y="360" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="dfN" x="54" y="372">Policy shape: local path approved by default; every connector is a separate, named, revocable approval.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - two data paths, two different governance treatments</figcaption>
+    </figure>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The CISO conversation, compressed.</strong> "Where does the data go?" has a two-sentence answer once the paths are separated: on the local path, files stay on the laptop - no mandatory cloud upload. Connectors change that, so each one arrives at the review as its own line item with its own data flow. Reviews that start this way approve pilots; reviews that start with "it's an AI agent" stall.</p>
+    </div>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Marketplace vetting + permission modes: the org dials<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two more governance dials worth setting deliberately before a5's rollout:</p>
+        <ul>
+          <li><strong>Skills Marketplace vetting.</strong> The marketplace ships skill packages your team can install, and it runs <strong>automatic security scanning</strong> on them - a real control, and not a sufficient one. Treat marketplace skills exactly like your browser-extension policy: scanning catches the known-bad, a human still asks "who published this, what does it access, do we need it?" A simple rule that works: anyone may propose a skill, one named person approves installs for the team, and the approved list lives in the policy doc.</li>
+          <li><strong>Permission modes as the org dial.</strong> The product exposes permission modes - how much the agent may do between confirmations. This is your rollout throttle: start every new user conservative (confirm plans, confirm outward actions), and loosen per task type only after a pattern has earned trust in pilot reviews. The dial should move on evidence, not on enthusiasm - and moving it should be a logged decision, not a personal preference. Scheduled automation (operator session b8) is where a loosened dial matters most, so decide the rule before anyone schedules anything.</li>
+        </ul>
+        <p>UI names for both surfaces can drift between releases - re-verify at workbuddy.ai before the policy doc goes out.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ EXERCISE ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Exercise</span>
+      <h2>Draft the eight-question governance checklist <span class="tag exercise">◐ 18 min in session + this week</span></h2>
+    </div>
+    <p class="lede">Answer these eight questions in writing and you have the WorkBuddy section of your team policy doc. Each maps to a control you met tonight; none needs more than three sentences.</p>
+    <ul>
+      <li><strong>1 · Folders.</strong> Which folders may the agent touch, per role - and who approves widening access beyond them?</li>
+      <li><strong>2 · Plans.</strong> Who confirms plans before execution, and is rubber-stamping named in the doc as a violation, not a shortcut?</li>
+      <li><strong>3 · Modes.</strong> What is the default permission mode for new users, and what evidence justifies loosening it for a task type?</li>
+      <li><strong>4 · Verification.</strong> What counts as "external use" for us, and who is the named verifier for each artifact class that crosses that line?</li>
+      <li><strong>5 · Connectors.</strong> Which connectors are approved, what data does each one move, and who can revoke one?</li>
+      <li><strong>6 · Audit trails.</strong> Who reviews audit trails, on what cadence, and where do they note what they found?</li>
+      <li><strong>7 · Marketplace.</strong> Who approves skill installs, and where does the approved-skill list live?</li>
+      <li><strong>8 · Data hygiene.</strong> When is the Data Management page reviewed, what is our retention stance, and what must never go into Memory?</li>
+    </ul>
+    <div class="callout tip">
+      <strong>Keep it to one page</strong>
+      A governance doc nobody reads governs nothing. Eight answers, one page, reviewed quarterly - and revisit answers 3, 5 and 7 after a5, when the Team plan's Admin Console gives you central enforcement instead of per-seat trust.
+    </div>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">The layers, data model and controls tonight come straight from the official guides and docs; the verify rule's evidence base is independent review plus the operator track's worked example. WorkBuddy moves fast (global launch May 2026) - settings-page names drift, so re-verify at workbuddy.ai before circulating your policy doc. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - "WorkBuddy Download, Install &amp; Use Guide (Overseas)"</span><span class="note">Folder authorization, plan confirmation, sandboxed execution · Part 1</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - "AI Agent for Business Automation: What WorkBuddy Can Do"</span><span class="note">Audit trail, Memory, Skills Marketplace security scanning · Parts 1-2</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WorkBuddy docs - Permission Modes, Data Management, Memory</span><span class="note">The org dials and the data-hygiene questions · Part 2</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Eigent - "WorkBuddy AI Review (2026)": "verify outputs before external use"</span><span class="note">The non-negotiable's evidence base; operators drill it in b2 and b10</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Why did the S$102,947.00 pack nearly ship, when the instruction was otherwise excellent?</p>
+      <button class="qopt" type="button">A · The agent's model was too weak for currency math</button>
+      <button class="qopt" type="button">B · The error was silent - a mixed-currency sum looks exactly like a correct one until something verifies it</button>
+      <button class="qopt" type="button">C · The files were corrupted</button>
+      <p class="qwhy">The trap sat in the data (MYR summed as SGD), and nothing failed loudly. One verify clause surfaced it: RM 18,985.00 → S$5,753.03, corrected total S$89,715.03. That is why verification is policy, not preference.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · A team member wants to connect Gmail "since we already approved Google Drive". The right governance response is:</p>
+      <button class="qopt" type="button">A · Fine - Google is already an approved vendor</button>
+      <button class="qopt" type="button">B · No - connectors are banned once the local path works</button>
+      <button class="qopt" type="button">C · Evaluate it separately - every connector is its own data decision with its own flow</button>
+      <p class="qwhy">The local-first path and each connector get different treatments. Drive approval says nothing about what Gmail access moves across the boundary. Per-connector, named, revocable approvals - question 5 on your checklist.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The Skills Marketplace runs automatic security scanning. What does that change about your vetting policy?</p>
+      <button class="qopt" type="button">A · Little - scanning catches known-bad, a human still approves installs like browser extensions</button>
+      <button class="qopt" type="button">B · Everything - scanned skills can be installed freely</button>
+      <button class="qopt" type="button">C · Nothing is safe - the marketplace should be blocked entirely</button>
+      <p class="qwhy">Scanning is a real control and an insufficient one - the same posture you already hold on browser-extension stores. Keep the human approval step: who published it, what does it access, do we need it?</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Three layers, three questions</b><span>Folder auth: which folders, who widens? · Plan confirmation: read or rubber-stamped? · Sandbox + audit: who reviews, when?</span></div>
+      <div class="cheat-item"><b>The non-negotiable</b><span>No agent-produced figure or doc goes external without a named person verifying it against the audit trail. One rule, two speeds.</span></div>
+      <div class="cheat-item"><b>The policy anecdote</b><span>S$102,947.00 shipped vs S$89,715.03 caught - one missing verify ask, an error silent and 3.3x wrong on the MY line.</span></div>
+      <div class="cheat-item"><b>Two data paths</b><span>Local-first desktop: files need not upload. Connectors: each one is a separate, named, revocable data decision.</span></div>
+      <div class="cheat-item"><b>Data hygiene pages</b><span>Data Management: what is stored, where, how to clear - quarterly review. Memory: private + editable; no client secrets in it.</span></div>
+      <div class="cheat-item"><b>Marketplace posture</b><span>Automatic security scanning exists; vet like browser extensions anyway. One named approver, one approved-skill list.</span></div>
+      <div class="cheat-item"><b>The org dial</b><span>Permission modes throttle the rollout: start conservative, loosen per task type on pilot evidence, log every move of the dial.</span></div>
+      <div class="cheat-item"><b>The deliverable</b><span>Eight questions, one page, reviewed quarterly. a5 adds the Admin Console so policy becomes enforcement, not trust.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 4 of 6 · learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a3-where-it-fits.html">← a3: Where it fits your team</a> &nbsp;·&nbsp; <a href="a5-rollout-playbook.html">Next: The rollout playbook →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

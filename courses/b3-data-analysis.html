@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operator session 3 · Data analysis - learn workbuddy with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-workbuddy-with-phoebe</a> / Operator session 3 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe · Operator track · Session 3 of 10</div>
+    <h1>Data <span class="accent">analysis</span></h1>
+    <p class="sub">Tonight the Meridian pack gets its first real artifact. WorkBuddy's data-analysis family reads your CSV and Excel files, finds the trends, and builds the charts and dashboards - if the instruction earns it. You will apply b2's five levers to a data task for real: merge Meridian's Singapore sales sheets, compute Q1 vs Q2, chart the trend, and ship a one-page analysis report whose every figure you verified against the source. The numbers you should get are printed on this page - your run either matches them or you learn something.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Operator track</span>
+      <span class="chip audience">Office professionals - b1 install + b2 levers assumed</span>
+      <span class="chip audience">Real files at your seat: sg-sales-2026.xlsx in ~/Documents/Meridian</span>
+      <span class="chip time">45 min · Pack artifact 1</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-16 · Data family + the instruction pattern</span>
+      <span class="a3" style="flex:6">16-42 · Build-along: merge, then report</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>First artifact night</h2>
+    </div>
+    <p class="lede">b1 gave you the loop and the boundary; b2 gave you the five levers and the scorecard ladder. Tonight is the first session where a lever gets earned on real work: <strong>Output format</strong> starts paying tonight (the ladder's 6 to 8 climb runs through b3-b4). The deliverable is pack artifact 1 - Meridian's H1 sales analysis - and it goes into the same folder the b10 capstone will assemble from. From tonight on, everything you build is something you ship.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Build-along - everyone does it</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A merged, charted, verified sales analysis (Q1 S$37,630.00 → Q2 S$46,332.00, +23.1%), a reusable instruction pattern for any spreadsheet task, and the habit of checking the agent's figures against the source sheet before anyone else sees them.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT THE DATA FAMILY DOES ============ -->
+  <section class="section" id="data-family">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers Tencent Cloud "What WorkBuddy Can Do", the Data Analysis practice case</span>
+      <h2>What the data-analysis family really does <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The official capability guide is specific: WorkBuddy <em>reads your CSV and Excel files, finds trends, and builds charts and dashboards</em>. Inside the four-stage loop that means Understand parses your question, Plan lists which files and sheets it will read and what it will compute, Act does the merge and the math in the sandbox, and Deliver hands you chart files plus a written analysis - with the audit trail of everything it touched. Your job sits at the same two checkpoints as always: read the plan going in, verify the figures coming out.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Data analysis pipeline: your spreadsheet files go in, WorkBuddy reads and merges, computes totals and trends, and delivers charts plus a report.">
+        <style>
+          .daT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .daS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .daX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .daN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .daWire { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#daHd); }
+        </style>
+        <defs>
+          <marker id="daHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <text class="daX" x="30" y="46">files in · Meridian folder</text>
+        <rect x="30" y="60" width="170" height="52" rx="8" fill="#1E293B"/>
+        <text class="daT" x="46" y="82">YOUR FILES</text>
+        <text class="daS" x="46" y="100">sg-sales-2026.xlsx</text>
+        <rect x="30" y="122" width="170" height="40" rx="8" fill="#1E293B" opacity=".72"/>
+        <text class="daS" x="46" y="146">sheets: Q1 + Q2</text>
+        <rect x="250" y="60" width="170" height="52" rx="8" fill="#003BA3"/>
+        <text class="daT" x="266" y="82">READ + MERGE</text>
+        <text class="daS" x="266" y="100">one combined table</text>
+        <rect x="470" y="60" width="170" height="52" rx="8" fill="#0052D9"/>
+        <text class="daT" x="486" y="82">COMPUTE</text>
+        <text class="daS" x="486" y="100">totals · trend · top SKU</text>
+        <rect x="690" y="60" width="170" height="52" rx="8" fill="#0087A8"/>
+        <text class="daT" x="706" y="82">CHART + REPORT</text>
+        <text class="daS" x="706" y="100">trend chart + one-pager</text>
+        <path class="daWire" d="M200,86 L245,86"/>
+        <path class="daWire" d="M420,86 L465,86"/>
+        <path class="daWire" d="M640,86 L685,86"/>
+        <text class="daX" x="250" y="186">the plan screen names the files and sheets it will read -</text>
+        <text class="daX" x="250" y="204">a wrong sheet gets caught BEFORE the merge, not after</text>
+        <rect x="30" y="214" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="daN" x="54" y="226">Merge, compute, chart happen in the sandbox on YOUR machine - the desktop app works on local files, no mandatory upload.</text>
+        <rect x="30" y="246" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="daN" x="54" y="258">Deliver = files you can open: the chart, the report, the merged table - plus the audit trail of every cell it touched.</text>
+        <rect x="30" y="278" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="daN" x="54" y="290">A dashboard is the same pipeline with more charts - earn the one-pager first, then scale the format clause up.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - files in, analysis steps, chart + report out</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Where data tasks sit in the four-stage loop<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Data tasks stress the loop in one specific place: <strong>Act produces numbers, and numbers fail silently</strong>. A wrong topic announces itself; a wrong figure sits there looking confident. So the data family shifts your attention to the two edges:</p>
+        <ul>
+          <li><strong>At Plan</strong> - check the file list and sheet names in the proposed steps. The most common data failure is the right analysis on the wrong sheet.</li>
+          <li><strong>At Deliver</strong> - open the source sheet next to the report and spot-check the headline figures. b2's simulator showed you why; tonight you do it on a real deliverable.</li>
+          <li><strong>The audit trail is your friend</strong> - it lists what was read and what was computed. Thirty seconds of skimming it is cheaper than one wrong number in a leadership deck.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What counts as a data task (and what does not)<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The official Data Analysis practice case covers spreadsheets in, insight out. Map your own week onto it:</p>
+        <ul>
+          <li><strong>Good fits</strong> - merging monthly exports, quarter-vs-quarter comparisons, top-N rankings, trend charts, "what stands out in this file" summaries, recurring dashboards.</li>
+          <li><strong>Needs more than tonight</strong> - data living in Google Drive or Notion (that is reachable context after b7's connectors), analyses that should re-run every Monday (b8's automation).</li>
+          <li><strong>Not this family</strong> - judgment calls the data cannot settle ("should we raise prices?"). WorkBuddy computes the trend; deciding what it means for Meridian stays with you.</li>
+        </ul>
+        <p>WorkBuddy moves fast (global launch May 2026) - the exact chart types and dashboard options drift between updates, so re-verify at workbuddy.ai when a menu looks different from tonight's build-along.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE INSTRUCTION PATTERN ============ -->
+  <section class="section" id="instruction-pattern">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · b2's five levers, applied to spreadsheets</span>
+      <h2>The instruction pattern for data tasks <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Data tasks reward the levers unevenly. <strong>Name every file and sheet</strong> - "the sales data" invites the agent to guess among files, and a guess over data is a silent wrong number waiting to ship. <strong>State the question, not the chart type</strong> - "how did Q2 compare to Q1 and what drove it" gets you analysis; "make a bar chart" gets you a bar chart of whatever it guessed mattered. <strong>Pin the one-pager format</strong>, and <strong>put a verify ask on every figure</strong>. Here is tonight's actual instruction, clause by clause:</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anatomy of a real Meridian data instruction: five clauses, each labeled with the lever it pulls - goal, context and files, output format, right Expert, verify ask.">
+        <style>
+          .iaT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .iaC { font: 400 12.5px Inter, sans-serif; fill: #1E293B; }
+          .iaX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+        </style>
+        <text class="iaX" x="30" y="34">tonight's instruction, read top to bottom as one sentence - each clause is one lever pulled</text>
+        <rect x="30" y="52" width="190" height="52" rx="8" fill="#003BA3"/>
+        <text class="iaT" x="46" y="83">1 · CLEAR GOAL</text>
+        <text class="iaC" x="250" y="76">"Analyze Meridian's H1 Singapore sales for Monday's leadership sync,</text>
+        <text class="iaX" x="250" y="94">the question: how did Q2 compare to Q1, and what drove the change</text>
+        <rect x="30" y="118" width="190" height="52" rx="8" fill="#0052D9"/>
+        <text class="iaT" x="46" y="149">2 · CONTEXT + FILES</text>
+        <text class="iaC" x="250" y="142">using only ~/Documents/Meridian/sg-sales-2026.xlsx, sheets Q1 and Q2,</text>
+        <text class="iaX" x="250" y="160">file AND sheets named - nothing left for the agent to guess at</text>
+        <rect x="30" y="184" width="190" height="52" rx="8" fill="#2E7CF6"/>
+        <text class="iaT" x="46" y="215">3 · OUTPUT FORMAT</text>
+        <text class="iaC" x="250" y="208">as a one-pager: headline number, trend chart, top-3 SKU table, one risk,</text>
+        <text class="iaX" x="250" y="226">the exact shape of pack artifact 1 - not "a report", THIS report</text>
+        <rect x="30" y="250" width="190" height="52" rx="8" fill="#0087A8"/>
+        <text class="iaT" x="46" y="281">4 · RIGHT EXPERT</text>
+        <text class="iaC" x="250" y="274">routed to the data-analysis Expert,</text>
+        <text class="iaX" x="250" y="292">one clause buys chart discipline - the full Expert tour is b5</text>
+        <rect x="30" y="316" width="190" height="52" rx="8" fill="#1E293B"/>
+        <text class="iaT" x="46" y="347">5 · VERIFY ASK</text>
+        <text class="iaC" x="250" y="340">cross-checking every figure against the source sheets + audit trail."</text>
+        <text class="iaX" x="250" y="358">non-negotiable on data tasks - numbers fail silently (b2, trace 3)</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - a real Meridian instruction, every clause labeled by lever</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Question first, chart second<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The most common data-instruction mistake is specifying the visualization instead of the question:</p>
+        <ul>
+          <li><strong>Chart-first:</strong> "Make a bar chart of the sales data." The agent must guess what comparison matters - by month? by SKU? by quarter? You get a correct chart of an arbitrary slice.</li>
+          <li><strong>Question-first:</strong> "How did Q2 compare to Q1, and which products drove the change?" Now the trend chart, the top-SKU table, and the headline number all follow from the question - the agent picks the chart that answers it.</li>
+        </ul>
+        <p>Keep the chart-type words for the format clause, where they belong ("one trend chart" as part of the one-pager). The goal clause carries the question.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The pattern as a fill-in template<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Save this - it is b2's template specialized for spreadsheets, and it carries every data task in the rest of the course:</p>
+        <p><code>"Analyze [question, audience] using only [file path, sheet names] as [format: length, chart, table, risk], routed to the data-analysis Expert, cross-checking every figure against the source and attaching the audit trail."</code></p>
+        <ul>
+          <li>Ambiguous file names in your folder? Rename them first - one minute of file hygiene beats three rounds of plan corrections.</li>
+          <li>Recurring analysis? Freeze the goal and format clauses, swap only the file path week to week. b6 turns exactly that frozen pattern into a custom skill.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ BUILD-ALONG 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along 1 of 2</span>
+      <h2>Merge Meridian's sales files <span class="tag demo">★ 12 min · everyone does it</span></h2>
+    </div>
+    <p class="lede">The course pack you downloaded in b1 put <code>sg-sales-2026.xlsx</code> in your Meridian folder - two sheets, Q1 and Q2, six SKUs from Jade Oolong (S$24) to Golden Chrysanthemum (S$16). Run the merge-and-compute half of tonight's instruction and check your run against the canon numbers below.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Instruct.</strong> "Merge sheets Q1 and Q2 of ~/Documents/Meridian/sg-sales-2026.xlsx into one table, compute total revenue per quarter and the Q2 vs Q1 change, chart the monthly revenue trend, and list units sold per SKU for the half."</p></div>
+      <div class="step"><p><strong>Read the plan.</strong> It should name exactly one file and two sheets. If it proposes reading anything else in the folder, stop and tighten the context clause - do not confirm a plan you would not have written.</p></div>
+      <div class="step"><p><strong>Confirm and watch it act.</strong> Merge, totals, trend chart - all in the sandbox. Keep your hands off; this is delegation.</p></div>
+      <div class="step"><p><strong>Check the canon numbers.</strong> Q1 total <strong>S$37,630.00</strong> · Q2 total <strong>S$46,332.00</strong> · change <strong>+23.1%</strong> · top SKU <strong>Pandan Green, 1,060 units in H1</strong>. Your figures should match to the cent.</p></div>
+      <div class="step"><p><strong>If they do not match</strong> - open the audit trail and find what was read. Nine times out of ten a filter or an extra sheet crept in. This debugging move is the whole reason the trail exists.</p></div>
+    </div>
+
+    <div class="callout warn">
+      <strong>⚠ The file you must NOT merge tonight</strong>
+      Your Meridian folder also contains the Malaysia pilot file - and it is priced in <strong>MYR</strong>, not SGD. Merging it into tonight's Singapore analysis would sum RM straight into S$ and inflate the total by 3.3x on the MY line, exactly the silent wrong number b2's third trace showed you (S$102,947.00 vs the correct S$89,715.03). Leave it out of every instruction tonight. That trap is b10's lesson, and you will disarm it there properly - with a verify ask.
+    </div>
+  </section>
+
+  <!-- ============ BUILD-ALONG 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Build-along 2 of 2</span>
+      <h2>The analysis report - pack artifact 1 <span class="tag demo">★ 12 min · everyone does it</span></h2>
+    </div>
+    <p class="lede">Now the full instruction from Part 2, format clause and all. The deliverable is the one-pager that opens Meridian's market-entry pack: the Singapore baseline that justifies looking at Malaysia at all.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Run the full five-clause instruction</strong> from Part 2's diagram, word for word. One-pager: headline number, trend chart, top-3 SKU table, one risk.</p></div>
+      <div class="step"><p><strong>Read the plan, then confirm.</strong> Same gate as always - files right, output right, then go.</p></div>
+      <div class="step"><p><strong>Open the one-pager and verify.</strong> Headline should carry the +23.1% growth story; the SKU table should be led by Pandan Green at 1,060 units. Open the source sheet next to it and spot-check every number that appears - all of them, it is one page.</p></div>
+      <div class="step"><p><strong>Read the risk line critically.</strong> The agent proposes a risk from the data (concentration in one SKU is a fair candidate - Pandan Green is carrying growth). Agree or replace it: the risk line is where your judgment enters the artifact.</p></div>
+      <div class="step"><p><strong>File it as pack artifact 1</strong> - save as <code>meridian-pack/01-sg-sales-analysis</code> inside the Meridian folder. b10 assembles the pack from exactly these numbered artifacts.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The one-pager discipline</strong>
+      Leadership reads one page; nobody reads six. If your report came back longer, the format clause was loose - "one-pager" plus a named list of parts (headline, chart, table, risk) is what pins it. Same data, readable in 90 seconds: that is the format lever earning its place on the ladder.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 25-30 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run tonight's exact pattern on a real spreadsheet from your own work - a sales export, a budget, a tracker. All five clauses: question, named file and sheets, one-pager format, Expert, verify ask.</li>
+      <li>Verify it like you verified Meridian's: source sheet open next to the report, every figure spot-checked. Note how long verification took - it should be under five minutes for one page.</li>
+      <li>Rewrite one chart-first request you have made this year ("make me a graph of...") as a question-first instruction. Notice what the question clause forces you to decide.</li>
+      <li>Do NOT touch the Malaysia pilot file. If curiosity wins, at least read its currency column first - and bring what you noticed to b10.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This course teaches the working core of the official WorkBuddy documentation and Tencent Cloud's guides, cross-checked against independent coverage. WorkBuddy is a fast-moving product (global launch May 2026) - names and chart menus drift, so re-verify at workbuddy.ai. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - "What WorkBuddy Can Do": data analysis task family</span><span class="note">Reads CSV/Excel, finds trends, builds charts + dashboards · taught in Part 1</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WorkBuddy docs - Data Analysis practice case</span><span class="note">The merge-compute-chart pattern behind both build-alongs</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Tencent Cloud - Install &amp; Use Guide: plan confirmation + sandboxed execution</span><span class="note">Applied at the plan gate in both build-alongs; fundamentals in b1</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Independent reviews (Eigent, 2026) - verify outputs before external use</span><span class="note">Tonight's per-figure spot-check; the full shipping discipline is b10</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · The best goal clause for a data task states:</p>
+      <button class="qopt" type="button">A · The chart type you want ("make a bar chart of the sales data")</button>
+      <button class="qopt" type="button">B · Nothing - the file name is enough context for the agent to work it out</button>
+      <button class="qopt" type="button">C · The question and audience ("how did Q2 compare to Q1, for Monday's leadership sync")</button>
+      <p class="qwhy">Chart-first instructions get you a correct chart of an arbitrary slice. State the question; the right chart follows from it. Chart-type words belong in the format clause, as part of the one-pager spec.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Your run's Q2 total does not match the canon S$46,332.00. First move?</p>
+      <button class="qopt" type="button">A · Open the audit trail and check which files and sheets were actually read</button>
+      <button class="qopt" type="button">B · Re-run the same instruction and hope</button>
+      <button class="qopt" type="button">C · Use your number - the agent computed it, so it must be right</button>
+      <p class="qwhy">A mismatched figure almost always means different inputs - an extra sheet, a stray file, a filter. The audit trail lists exactly what was read; that is what it is for. Re-running the same instruction re-runs the same mistake.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Why does the Malaysia pilot file stay out of tonight's merge?</p>
+      <button class="qopt" type="button">A · It is too large for the free plan to process</button>
+      <button class="qopt" type="button">B · It is priced in MYR - merging it would sum RM into S$ as a silent wrong number</button>
+      <button class="qopt" type="button">C · WorkBuddy cannot read files with more than one currency</button>
+      <p class="qwhy">The trap is in the data, not the tool: RM 18,985.00 summed as S$ inflates the MY line 3.3x and nothing fails loudly. b10 disarms it properly with a verify ask - tonight you just refuse to step on it.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Operator session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The data family</b><span>Reads CSV/Excel, finds trends, builds charts + dashboards. Merge, compute, chart, report - all in the sandbox, all audited.</span></div>
+      <div class="cheat-item"><b>The pattern</b><span>[question + audience] using only [file, sheets] as [one-pager: headline, chart, table, risk], data-analysis Expert, verify every figure.</span></div>
+      <div class="cheat-item"><b>Question first</b><span>State the question, not the chart type. "How did Q2 compare to Q1" beats "make a bar chart" - the right chart follows the question.</span></div>
+      <div class="cheat-item"><b>Name everything</b><span>File AND sheet names in the instruction. "The sales data" is an invitation to guess - and data guesses fail silently.</span></div>
+      <div class="cheat-item"><b>Canon numbers</b><span>Q1 S$37,630.00 · Q2 S$46,332.00 · +23.1% · top SKU Pandan Green, 1,060 units H1. Your run matches or the audit trail explains.</span></div>
+      <div class="cheat-item"><b>Verify move</b><span>Source sheet open next to the report; spot-check every figure on the page. Under five minutes for a one-pager. No exceptions.</span></div>
+      <div class="cheat-item"><b>The MY trap</b><span>The Malaysia pilot file is in MYR. Do not merge it into SGD analyses - that silent 3.3x error is b10's lesson to disarm.</span></div>
+      <div class="cheat-item"><b>Pack artifact 1</b><span>Saved as meridian-pack/01-sg-sales-analysis. The Singapore baseline the whole market-entry pack builds on.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Operator session 3 of 10 · learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b2-instruction-craft.html">← b2: Instruction craft</a> &nbsp;·&nbsp; <a href="b4-research-reports.html">Next: Research + reports →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

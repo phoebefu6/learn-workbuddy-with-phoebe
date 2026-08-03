@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 6 · Measuring value + the roadmap - learn workbuddy with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-workbuddy-with-phoebe</a> / Leader session 6 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe · Leader track · Session 6 of 6</div>
+    <h1>Measuring <span class="accent">value</span> + the roadmap</h1>
+    <p class="sub">The pilot from a5 is running. Tonight decides what its numbers are allowed to mean. First, the metric split that keeps you honest: activity numbers that always go up versus outcome numbers that can actually go down - deliverables used, hours returned, rework rate. Then the arithmetic your CFO will ask for: cost per deliverable against the hour-cost it replaced, worked on real Team plan numbers. You leave with a scale-or-stop decision memo template, a quarterly re-verify rhythm for a product that is still moving fast - and the handoff line that starts the other half of this course.</p>
+    <div class="chip-row">
+      <span class="chip level">🤝 Leader track</span>
+      <span class="chip audience">C-level · managers · team leads</span>
+      <span class="chip audience">No tool needed - decide-and-govern mode</span>
+      <span class="chip time">45 min · final leader session</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:5">3-25 · Real metrics + credit economics</span>
+      <span class="a3" style="flex:4">25-42 · Exercise: scale/stop memo</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The session where numbers meet judgment</h2>
+    </div>
+    <p class="lede">Every failed AI rollout has a dashboard, and the dashboard is green. That is because most rollouts measure what the tool makes easy to count - logins, tasks run, messages sent - instead of what the business actually wanted: work that ships and hours that come back. Tonight installs the discipline once: a short list of metrics that cannot be gamed by enthusiasm, one piece of cost arithmetic that survives a CFO, and a decision rule you commit to before the pilot report lands on your desk.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Exercise - everyone drafts one</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The vanity-versus-value metric split memorized, cost-per-deliverable arithmetic you can redo on your own numbers, a written scale/stop rule with the 30% rework threshold, a quarterly re-verify habit for a fast-moving product - and the full leader track behind you.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: METRICS ============ -->
+  <section class="section" id="real-metrics">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the measurement half of a5's pilot</span>
+      <h2>Metrics that are not vanity <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">The test is simple: <strong>a vanity metric can rise while zero value lands; a value metric cannot.</strong> Logins rise when people are curious. Tasks-run rises when people are playing. Neither tells you whether Monday's briefing was actually read or the analysis actually reached the client. Your pilot tracks three value metrics and nothing else: deliverables used downstream, hours returned on the three pilot tasks, and the rework rate on agent output.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two columns: vanity metrics that measure activity - logins, tasks run, messages sent - versus value metrics that measure outcomes - deliverables used downstream, hours returned, rework rate.">
+        <style>
+          .vmT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .vmI { font: 600 13px Inter, sans-serif; fill: #1E293B; }
+          .vmX { font: 400 11.5px Inter, sans-serif; fill: #64748B; }
+          .vmN { font: 600 13px Inter, sans-serif; fill: #013340; }
+        </style>
+        <rect x="40" y="30" width="385" height="46" rx="8" fill="#64748B"/>
+        <text class="vmT" x="58" y="58">VANITY · measures activity</text>
+        <rect x="455" y="30" width="385" height="46" rx="8" fill="#0052D9"/>
+        <text class="vmT" x="473" y="58">VALUE · measures outcomes</text>
+        <rect x="40" y="94" width="14" height="14" rx="3" fill="#64748B"/>
+        <text class="vmI" x="64" y="106">Logins + active seats</text>
+        <text class="vmX" x="64" y="124">rises on curiosity alone</text>
+        <rect x="40" y="146" width="14" height="14" rx="3" fill="#64748B"/>
+        <text class="vmI" x="64" y="158">Tasks run</text>
+        <text class="vmX" x="64" y="176">rises on play; says nothing about use</text>
+        <rect x="40" y="198" width="14" height="14" rx="3" fill="#64748B"/>
+        <text class="vmI" x="64" y="210">Messages sent to the agent</text>
+        <text class="vmX" x="64" y="228">more chat can mean worse instructions</text>
+        <rect x="455" y="94" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="vmI" x="479" y="106">Deliverables used downstream</text>
+        <text class="vmX" x="479" y="124">the consumer used it, unprompted, twice+</text>
+        <rect x="455" y="146" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="vmI" x="479" y="158">Hours returned on the 3 pilot tasks</text>
+        <text class="vmX" x="479" y="176">before-vs-after on those tasks only</text>
+        <rect x="455" y="198" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="vmI" x="479" y="210">Rework rate on agent output</text>
+        <text class="vmX" x="479" y="228">share of runs redone by hand - can rise!</text>
+        <line x1="40" y1="258" x2="840" y2="258" stroke="#64748B" stroke-width="1.5"/>
+        <rect x="40" y="278" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="vmN" x="64" y="290">The test: a vanity metric can go up while zero value lands. A value metric cannot.</text>
+        <rect x="40" y="310" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="vmN" x="64" y="322">Track the left column if you like - just never let it into the decision memo.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the metric split that keeps a pilot report honest</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>When to scale, when to stop<span class="mini">6 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Write the rule before the report exists, so the decision is a reading, not a negotiation:</p>
+        <ul>
+          <li><strong>Scale</strong> when both hold: pilot deliverables are being used <em>weekly</em> by their downstream consumers, and the verify discipline is holding - audit trails read, figures cross-checked before anything leaves the building (a4's non-negotiable, b10 on the operator side).</li>
+          <li><strong>Stop</strong> (or redesign) when outputs are re-done by hand more than <strong>30% of the time</strong>. At that rework rate you are paying twice for the same work - once in credits, once in human hours - and the honest fixes are better instructions or a different task, not more seats.</li>
+        </ul>
+        <p>Two traps between those lines. <strong>Scaling on enthusiasm:</strong> the demo wowed, the champions are happy, the left column is green - but nothing is being used weekly yet; that is "extend the pilot", not "scale". <strong>Stopping on one bad week:</strong> a single rework spike usually traces to one bad instruction template - diagnose with b2's five levers before you kill a task. And scaling itself stays boring: add the next three tasks and next three people, re-run the same 3 x 3 x 3 with the same bar. The playbook does not change shape because it worked.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: CREDIT ECONOMICS ============ -->
+  <section class="section" id="credit-economics">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the arithmetic your CFO will actually ask for</span>
+      <h2>Credit economics per deliverable <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">One number decides the budget conversation: <strong>what does a used deliverable cost, and what did the hour-cost it replaced look like?</strong> The Team plan gives you clean inputs - ~$40 per seat per month and a 1,000-Credit shared pool metered in the Admin Console (a5). Divide the month's seat cost by the month's <em>used</em> deliverables. Not produced - used. Vanity accounting sneaks back in through the denominator.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Worked example: three Team seats at about forty dollars each is one hundred twenty dollars a month, producing twenty used deliverables, gives six dollars per deliverable, versus roughly one hundred twenty dollars of analyst time each deliverable replaced.">
+        <style>
+          .ceT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .ceS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .ceX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .ceN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .ceWire { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#ceHd); }
+        </style>
+        <defs>
+          <marker id="ceHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <rect x="30" y="70" width="230" height="80" rx="10" fill="#003BA3"/>
+        <text class="ceT" x="46" y="96">SPEND / MONTH</text>
+        <text class="ceS" x="46" y="116">3 seats x ~$40 = ~$120</text>
+        <text class="ceS" x="46" y="134">+ 1,000-Credit pool</text>
+        <rect x="320" y="70" width="250" height="80" rx="10" fill="#0052D9"/>
+        <text class="ceT" x="336" y="96">USED DELIVERABLES</text>
+        <text class="ceS" x="336" y="116">e.g. 12 briefings, 6 reports,</text>
+        <text class="ceS" x="336" y="134">2 decks = 20 used / month</text>
+        <rect x="630" y="70" width="220" height="80" rx="10" fill="#0087A8"/>
+        <text class="ceT" x="646" y="96">COST EACH</text>
+        <text class="ceS" x="646" y="116">$120 / 20 = $6</text>
+        <text class="ceS" x="646" y="134">per used deliverable</text>
+        <path class="ceWire" d="M260,110 L315,110"/>
+        <path class="ceWire" d="M570,110 L625,110"/>
+        <rect x="30" y="186" width="820" height="52" rx="10" fill="#1E293B"/>
+        <text class="ceT" x="46" y="208">VS THE HOUR-COST REPLACED</text>
+        <text class="ceS" x="46" y="228">a briefing that took ~2 analyst hours at ~$60/h was ~$120 of time - each, every week</text>
+        <rect x="30" y="266" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="ceN" x="54" y="278">Illustrative arithmetic on the ~$40-seat Team plan - the deliverable counts and hour rates are yours to swap in.</text>
+        <rect x="30" y="298" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="ceN" x="54" y="310">Only USED deliverables enter the denominator - and net off verification time, which is real work too.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - cost per used deliverable vs the hour-cost it replaced</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Keeping the arithmetic honest<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three adjustments separate a credible number from a slide-ware number:</p>
+        <ul>
+          <li><strong>Count verification time as cost.</strong> The verify discipline (a4) is human minutes per deliverable. Add it to the agent side of the ledger before comparing - the comparison usually still wins, and now it survives scrutiny.</li>
+          <li><strong>Charge rework to the agent.</strong> A deliverable redone by hand counts its full human hours on the agent side. This is what connects the CFO math to the 30% stop rule - past that rate, cost per deliverable quietly exceeds the hour-cost it was meant to replace.</li>
+          <li><strong>Watch credits per task family in the console.</strong> Credit burn differs by task type, and heavy research or deck tasks eat disproportionately. If the pool empties before month-end, your true cost includes the top-up - price it in rather than discovering it in Q3.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The roadmap: what changes next in agent land<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>What you decided on tonight is a moving target, and the honest read of the direction of travel:</p>
+        <ul>
+          <li><strong>Deeper connectors.</strong> The Drive / Gmail / Notion / Slack / GitHub / Jira set follows the pluggable MCP pattern, so expect the reachable-context list to keep growing - and with it, the data-governance surface you scoped in a4. Each new connector is a governance decision, not a free upgrade.</li>
+          <li><strong>More Experts and skills.</strong> The 100+ Expert catalog and 20+ skill packages are the fastest-drifting inventory in the product. Your a5 vetting workflow is built for exactly this - reuse it as the catalog grows.</li>
+          <li><strong>Scheduled and remote patterns maturing.</strong> Scheduled runs pushing to Slack, Telegram, Discord and the other platforms, plus phone-triggered tasks, are where agents shift from tool to infrastructure. That is also where permission modes deserve a fresh look, because unattended runs raise the stakes on a4's boundary.</li>
+          <li><strong>The honest note:</strong> the global edition is young - worldwide launch was May 2026 - and it is moving fast. International support still lags the China edition, UI names drift between updates, and plans change. <strong>Put a quarterly re-verify in the calendar:</strong> pricing, connector list, permission surface, marketplace policy. Thirty minutes a quarter keeps every number in your decision memo true.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ RECAP + HANDOFF ============ -->
+  <section class="section" id="recap">
+    <div class="section-kicker">
+      <span class="klabel">Track close</span>
+      <h2>Six sessions, one operating stance <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">The leader track in one breath: a1 named the shift - execution agents, not chatbots. a2 opened the machine - the four-stage loop that ends in a verifiable file. a3 mapped it onto your team's real week. a4 drew the boundary - permissions, sandbox, audit, verify. a5 designed the pilot and priced it. Tonight made the numbers honest and the decision pre-committed. You now judge and govern this class of tool without ever needing to open it - which was the promise on the door.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Leader track recap: six sessions from agents-not-chatbots through governance, pilot and value, handing off to operator session b1.">
+        <style>
+          .rcT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .rcS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .rcN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .rcWire { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#rcHd); }
+        </style>
+        <defs>
+          <marker id="rcHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <rect x="30" y="40" width="125" height="66" rx="8" fill="#003BA3"/>
+        <text class="rcT" x="44" y="64">a1</text>
+        <text class="rcS" x="44" y="82">agents, not</text>
+        <text class="rcS" x="44" y="97">chatbots</text>
+        <rect x="169" y="40" width="125" height="66" rx="8" fill="#003BA3"/>
+        <text class="rcT" x="183" y="64">a2</text>
+        <text class="rcS" x="183" y="82">the loop +</text>
+        <text class="rcS" x="183" y="97">task families</text>
+        <rect x="308" y="40" width="125" height="66" rx="8" fill="#0052D9"/>
+        <text class="rcT" x="322" y="64">a3</text>
+        <text class="rcS" x="322" y="82">where it fits</text>
+        <text class="rcS" x="322" y="97">your team</text>
+        <rect x="447" y="40" width="125" height="66" rx="8" fill="#0052D9"/>
+        <text class="rcT" x="461" y="64">a4</text>
+        <text class="rcS" x="461" y="82">risk + the</text>
+        <text class="rcS" x="461" y="97">boundary</text>
+        <rect x="586" y="40" width="125" height="66" rx="8" fill="#2E7CF6"/>
+        <text class="rcT" x="600" y="64">a5</text>
+        <text class="rcS" x="600" y="82">pilot +</text>
+        <text class="rcS" x="600" y="97">economics</text>
+        <rect x="725" y="40" width="125" height="66" rx="8" fill="#2E7CF6"/>
+        <text class="rcT" x="739" y="64">a6</text>
+        <text class="rcS" x="739" y="82">value +</text>
+        <text class="rcS" x="739" y="97">roadmap</text>
+        <path class="rcWire" d="M787,106 L787,140"/>
+        <rect x="30" y="146" width="820" height="56" rx="10" fill="#0087A8"/>
+        <text class="rcT" x="46" y="170">HANDOFF · YOUR OPERATORS START AT b1</text>
+        <text class="rcS" x="46" y="188">install to shipped market-entry pack in ten sessions - your pilot champions are its first cohort</text>
+        <text class="rcN" x="30" y="228">You decide and govern; they instruct and ship. The pilot one-pager is the bridge between the two tracks.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the leader track, closed, and where your team goes next</figcaption>
+    </figure>
+
+    <div class="callout tip">
+      <strong>The handoff line</strong>
+      Your operators start at b1. Send your three pilot champions there this week - b1 installs and scopes the boundary you designed in a4, b2 trains the instruction craft the champions rule assumes, and b3 onward ships one real deliverable per session. Your decision memo will be reading their results.
+    </div>
+  </section>
+
+  <!-- ============ EXERCISE ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Exercise · 25-42 in session</span>
+      <h2>Write your scale/stop decision memo template <span class="tag exercise">◐ 17 min</span></h2>
+    </div>
+    <p class="lede">The memo you will fill in at week 3 of the pilot - written now, while no result can bias it. Five blocks, one page.</p>
+    <div class="steps">
+      <div class="step"><p><strong>The three value metrics, with blanks.</strong> Deliverables used downstream (per task, per week): ___. Hours returned on the three pilot tasks: ___. Rework rate: ___%. No other numbers admitted.</p></div>
+      <div class="step"><p><strong>The cost line.</strong> Seat spend / used deliverables = $___ each, verification time added, rework hours charged to the agent side, versus the hour-cost replaced: $___.</p></div>
+      <div class="step"><p><strong>The pre-committed rule, verbatim.</strong> "Scale if deliverables are used weekly AND verify discipline is holding. Stop or redesign if rework exceeds 30%." Sign it today's date - that signature is the whole point.</p></div>
+      <div class="step"><p><strong>The scale shape.</strong> If scale: the next 3 tasks, next 3 people, same 3 weeks, same bar. If stop: which lever failed (instruction, task choice, or tool) and what would have to change to retry.</p></div>
+      <div class="step"><p><strong>The re-verify footnote.</strong> "Pricing, connectors and permission surface re-verified at workbuddy.ai on [date]; next quarterly check due [date]." Then file the template next to a5's one-pager - they travel together.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This course teaches from the official WorkBuddy documentation and Tencent Cloud's guides, cross-checked against independent coverage. WorkBuddy is a fast-moving product (global launch May 2026) - the roadmap reading here is informed inference from public sources, not a vendor commitment, and every number deserves a quarterly re-check. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Eigent - "WorkBuddy AI Review (2026)" (independent)</span><span class="note">Honest limits: verify outputs, international lag, setup complexity; pricing tiers · Parts 1-2</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PR Newswire - Tencent Cloud unveils WorkBuddy + Miora (SuperAI 2026)</span><span class="note">Global positioning, SEA rollout, "execution-driven" framing · roadmap card</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Tencent Cloud guide + workbuddy.ai docs</span><span class="note">Team plan and Credits figures reused from a5; connector and Expert lists drift - re-verify quarterly</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Which of these belongs in the decision memo?</p>
+      <button class="qopt" type="button">A · Active seats per week - it shows the team is engaged</button>
+      <button class="qopt" type="button">B · Rework rate on agent output - the share of runs redone by hand</button>
+      <button class="qopt" type="button">C · Total tasks run - it shows the tool is getting real use</button>
+      <p class="qwhy">Seats and tasks-run are activity: they can climb while zero value lands. Rework rate is an outcome metric that can move against you - which is exactly what makes it trustworthy, and what wires the memo to the 30% stop rule.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · In the cost-per-deliverable arithmetic, the denominator is:</p>
+      <button class="qopt" type="button">A · Every deliverable the agent produced this month</button>
+      <button class="qopt" type="button">B · Credits consumed, converted at the seat price</button>
+      <button class="qopt" type="button">C · Only the deliverables actually used downstream</button>
+      <p class="qwhy">$120 of seats over 20 USED deliverables is $6 each - a number that survives a CFO. Divide by everything produced and vanity accounting is back through the denominator. And keep it honest: verification time and rework hours go on the agent's side of the ledger.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The pilot deliverables are used weekly and verify discipline is holding, but rework sits at 35%. The memo says:</p>
+      <button class="qopt" type="button">A · Stop or redesign - past 30% rework you are paying twice for the same work</button>
+      <button class="qopt" type="button">B · Scale - weekly usage is the metric that matters most</button>
+      <button class="qopt" type="button">C · Ignore the threshold this once; the champions are clearly enthusiastic</button>
+      <p class="qwhy">The 30% line was pre-committed precisely for this moment: at 35% rework, cost per deliverable quietly exceeds the hour-cost it replaced. Diagnose with the five levers (usually an instruction fix) and retry - but the rule reads, it does not negotiate.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The metric test</b><span>A vanity metric can rise while zero value lands; a value metric cannot. Logins, tasks run, messages = vanity.</span></div>
+      <div class="cheat-item"><b>The value three</b><span>Deliverables used downstream · hours returned on the 3 pilot tasks · rework rate on agent output. Nothing else in the memo.</span></div>
+      <div class="cheat-item"><b>Cost per deliverable</b><span>Seat spend / USED deliverables. Example: ~$120 of Team seats / 20 used = $6, vs ~$120 of analyst time replaced.</span></div>
+      <div class="cheat-item"><b>Honest ledger</b><span>Verification minutes and rework hours count on the agent's side. Watch credit burn per task family in the Admin Console.</span></div>
+      <div class="cheat-item"><b>Scale rule</b><span>Scale when deliverables are used weekly AND verify discipline holds. Then repeat the same 3 x 3 x 3 - boring on purpose.</span></div>
+      <div class="cheat-item"><b>Stop rule</b><span>Rework above 30% = stop or redesign. Diagnose the failed lever (usually the instruction) before blaming the tool.</span></div>
+      <div class="cheat-item"><b>The roadmap</b><span>Deeper connectors, more Experts, scheduled + remote patterns maturing. Global edition is young - re-verify quarterly at workbuddy.ai.</span></div>
+      <div class="cheat-item"><b>The handoff</b><span>Leader track done: you decide and govern. Your operators start at b1 - your pilot champions are the first cohort.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 6 of 6 · learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a5-rollout-playbook.html">← The rollout playbook</a> &nbsp;·&nbsp; <a href="b1-install-first-task.html">Want hands-on? Operator track →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

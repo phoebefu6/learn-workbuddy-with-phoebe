@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operator session 8 · Automation + scheduling - learn workbuddy with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-workbuddy-with-phoebe</a> / Operator session 8 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe · Operator track · Session 8 of 10</div>
+    <h1>Automation + <span class="accent">scheduling</span></h1>
+    <p class="sub">Everything so far ran because you pressed go. Tonight a task runs because Monday arrived. WorkBuddy schedules tasks hourly, daily, weekly, or one-time, and pushes the result to Slack, Telegram, Discord, WeChat Work, Feishu, DingTalk or QQ - the official Daily Briefing practice case is the canonical pattern. You will schedule Meridian's weekly briefing to build itself every Monday at 7am and land in Slack before you wake. But a scheduled task runs without you at the plan gate, so tonight is equally about the discipline: only instructions that have earned trust get a schedule, and the verify ask travels inside them.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Operator track</span>
+      <span class="chip audience">Office professionals: analysts · marketers · ops · anyone with deadlines</span>
+      <span class="chip audience">Hands-on · needs b2's briefing instruction + a Slack workspace</span>
+      <span class="chip time">Pack artifact 5 ships tonight</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-16 · Scheduling + what is safe to automate</span>
+      <span class="a3" style="flex:5">16-42 · Build-along: the Monday briefing</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this session sits</h2>
+    </div>
+    <p class="lede">b2 gave you the five-lever briefing instruction and you have run it by hand ever since - the one that lands Q2 at S$46,332.00, +23.1% over Q1, as a one-pager. That manual mileage was not busywork; it was the qualification lap. Tonight that exact instruction becomes <strong>pack artifact 5: the scheduled weekly briefing</strong> - same words, same verify ask, new trigger. Automation in this course is never "write something new and let it rip"; it is "promote something proven".</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Build-along - everyone does it</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      Meridian's briefing scheduled for every Monday 7am with the result pushed to Slack, one one-time scheduled run set for Friday, and the promotion rule that keeps schedules trustworthy: run it manually three times clean, keep the verify ask inside the instruction, review the audit trail weekly.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: SCHEDULED TASKS ============ -->
+  <section class="section" id="scheduled-tasks">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers workbuddy.ai docs "Automation", the Daily Briefing practice case, platform integrations</span>
+      <h2>Tasks that run because the clock says so <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">A scheduled task is an ordinary WorkBuddy task with two extra decisions: <strong>when it fires</strong> - hourly, daily, weekly, or one-time - and <strong>where the result goes</strong> - pushed to Slack, Telegram, Discord, WeChat Work, Feishu, DingTalk or QQ, so the deliverable arrives where your team already looks instead of waiting on your desktop. The official Daily Briefing practice case is the canonical shape: a recurring instruction gathers the same sources on the same cadence and pushes one digest to one channel. Everything you schedule tonight and forever is that shape wearing different clothes.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schedule flow: a cadence trigger fires, the saved instruction runs through the four-stage loop unattended, and the deliverable is pushed to a chat channel.">
+        <style>
+          .auT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .auS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .auH { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .auX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .auN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .auWire { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#auHd); }
+        </style>
+        <defs>
+          <marker id="auHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <text class="auH" x="40" y="34">1 · THE TRIGGER - four cadences</text>
+        <rect x="40" y="50" width="120" height="44" rx="8" fill="#1E293B"/>
+        <text class="auT" x="56" y="70">HOURLY</text>
+        <text class="auS" x="56" y="86">monitors</text>
+        <rect x="176" y="50" width="120" height="44" rx="8" fill="#1E293B"/>
+        <text class="auT" x="192" y="70">DAILY</text>
+        <text class="auS" x="192" y="86">digests</text>
+        <rect x="312" y="50" width="120" height="44" rx="8" fill="#003BA3"/>
+        <text class="auT" x="328" y="70">WEEKLY</text>
+        <text class="auS" x="328" y="86">briefings ← tonight</text>
+        <rect x="448" y="50" width="120" height="44" rx="8" fill="#1E293B"/>
+        <text class="auT" x="464" y="70">ONE-TIME</text>
+        <text class="auS" x="464" y="86">deadlines</text>
+        <text class="auX" x="600" y="76">Meridian: Monday 7:00am</text>
+        <rect x="40" y="140" width="240" height="60" rx="10" fill="#003BA3"/>
+        <text class="auT" x="58" y="166">SAVED INSTRUCTION</text>
+        <text class="auS" x="58" y="184">b2's briefing, verify ask inside</text>
+        <rect x="330" y="140" width="240" height="60" rx="10" fill="#0052D9"/>
+        <text class="auT" x="348" y="166">RUNS UNATTENDED</text>
+        <text class="auS" x="348" y="184">full loop - nobody at the gate</text>
+        <rect x="620" y="140" width="230" height="60" rx="10" fill="#0087A8"/>
+        <text class="auT" x="638" y="166">PUSHED TO CHANNEL</text>
+        <text class="auS" x="638" y="184">deliverable + audit trail</text>
+        <path class="auWire" d="M372,94 C372,118 260,116 210,133"/>
+        <path class="auWire" d="M280,170 L325,170"/>
+        <path class="auWire" d="M570,170 L615,170"/>
+        <text class="auX" x="40" y="238">2 · THE PUSH TARGETS - results land where the team already looks</text>
+        <rect x="40" y="252" width="810" height="44" rx="8" fill="#2E7CF6"/>
+        <text class="auT" x="58" y="278">Slack · Telegram · Discord · WeChat Work · Feishu · DingTalk · QQ</text>
+        <rect x="40" y="326" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="auN" x="64" y="338">Monday 7:00am: trigger fires, the saved instruction runs, and the briefing is in Slack before you wake.</text>
+        <rect x="40" y="358" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="auN" x="64" y="370">The plan gate you have used since b1 is empty on a scheduled run - Part 2 is about earning that emptiness.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - trigger, unattended run, push to channel: the Daily Briefing pattern every schedule follows</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Matching cadence to task shape<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The cadence is a design decision, not a preference - each one suits a different task shape:</p>
+        <ul>
+          <li><strong>Hourly</strong> - monitors and watchers: "flag any new file landing in the shared folder." High frequency means the output must be near-zero-noise or it becomes channel spam by lunchtime.</li>
+          <li><strong>Daily</strong> - digests: the official Daily Briefing case. Same sources, one page, every morning.</li>
+          <li><strong>Weekly</strong> - briefings and reports with enough new data to be worth reading. Meridian's Monday briefing lives here.</li>
+          <li><strong>One-time</strong> - a deadline you refuse to hold in your head: "Friday 4pm, check the pack folder and report status." Fire once, done.</li>
+        </ul>
+        <p>The push target matters as much as the cadence: a briefing pushed to the team's Slack channel is a shared artifact; the same briefing on your desktop is a private chore you still have to forward. In b9, these same chat platforms run the other direction - triggering tasks from your phone.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What a schedule does NOT change<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A scheduled task still runs in the sandbox, still touches only authorized folders and wired connectors (b7), and still writes an audit trail on every run. The boundary from b1 holds. The one thing missing is you: nobody reads the plan at 7am. Every safeguard that remains is either structural (sandbox, folder scope) or baked into the instruction itself (the verify ask). That is why Part 2 exists.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: WHAT IS SAFE TO AUTOMATE ============ -->
+  <section class="section" id="safe-to-automate">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the promotion rule</span>
+      <h2>Only proven instructions get a schedule <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">The rule is one sentence: <strong>automate only tasks whose instruction you have already run manually three or more times with clean results.</strong> Three clean manual runs prove the instruction survives contact with real data variation - a week with a missing file, a sheet with an extra column, a source that moved. And the stakes are higher than they look, because <strong>the verify problem compounds on a schedule</strong>: a wrong number you ship once is an incident; a wrong weekly number ships weekly, builds a track record, and gets trusted more each Monday it goes unchallenged. b2's currency trap as a scheduled task would have delivered S$102,947.00 to leadership every week until someone audited.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The promotion ladder: run the instruction manually three times with clean results, freeze it as a template with the verify ask inside, then and only then schedule it.">
+        <style>
+          .laT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .laS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .laX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .laN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .laWire { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#laHd); }
+        </style>
+        <defs>
+          <marker id="laHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <rect x="40" y="180" width="240" height="80" rx="10" fill="#1E293B"/>
+        <text class="laT" x="58" y="208">RUN 1 · RUN 2 · RUN 3</text>
+        <text class="laS" x="58" y="228">manually, at the plan gate,</text>
+        <text class="laS" x="58" y="246">clean result all three times</text>
+        <rect x="330" y="120" width="240" height="80" rx="10" fill="#0052D9"/>
+        <text class="laT" x="348" y="148">FREEZE THE TEMPLATE</text>
+        <text class="laS" x="348" y="168">exact words that worked -</text>
+        <text class="laS" x="348" y="186">five levers, verify ask INSIDE</text>
+        <rect x="620" y="60" width="230" height="80" rx="10" fill="#0087A8"/>
+        <text class="laT" x="638" y="88">SCHEDULE IT</text>
+        <text class="laS" x="638" y="108">cadence + push channel;</text>
+        <text class="laS" x="638" y="126">audit review weekly</text>
+        <path class="laWire" d="M280,210 C310,205 310,170 325,162"/>
+        <path class="laWire" d="M570,150 C600,145 600,110 615,102"/>
+        <text class="laX" x="46" y="290">any dirty result: fix the instruction, restart the count at run 1</text>
+        <rect x="40" y="314" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="laN" x="64" y="326">Why three: one clean run can be luck; three runs meet real variation - missing files, extra columns, moved sources.</text>
+        <rect x="40" y="346" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="laN" x="64" y="358">Why the verify ask travels inside: at 7am it is the only checker in the room. A wrong weekly number ships weekly.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - manual three times, template, then schedule: the only ladder onto the calendar</figcaption>
+    </figure>
+
+    <div class="callout warn">
+      <strong>⚠ Permission modes matter most right here</strong>
+      Every task since b1 had you at the plan gate - reading the steps, catching the wrong source, refusing the odd grant. A scheduled task runs without you there. That is not a reason to avoid scheduling; it is the reason for the two compensating controls: only instructions that have <strong>earned trust</strong> through three clean manual runs get promoted, and the <strong>verify clause stays inside the instruction</strong> so the checking happens even when you are asleep. Check your Permission Modes before tonight's build-along: scheduled runs should operate under the conservative settings you set in b1, not under something loosened "to make automation smoother". Smoothness is exactly the wrong goal for an unattended write to your files and your team's Slack.
+    </div>
+
+    <div class="callout tip">
+      <strong>The 5-minute Friday habit</strong>
+      The moment anything is scheduled, audit trail review stops being optional and becomes a small weekly ritual: open the scheduled task's history, skim what ran, what it read, what it wrote, and spot-check one figure in the pushed briefing against its source file. Five minutes, once a week, standing between you and the compounding-error problem. b10 turns this into the full shipping discipline; tonight it just goes on your calendar.
+    </div>
+  </section>
+
+  <!-- ============ BUILD-ALONG 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along 1 of 2 · pack artifact 5 · the Daily Briefing pattern, weekly</span>
+      <h2>Meridian's Monday briefing, scheduled <span class="tag demo">★ 14 min · everyone does it</span></h2>
+    </div>
+    <p class="lede">You have run b2's five-lever briefing instruction by hand since the simulator session - the one-pager that reports Q2 at S$46,332.00, +23.1% over Q1, top SKU Pandan Green. It has its three clean runs. Tonight it gets promoted.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Retrieve the exact instruction</strong> from b2's homework - goal + audience, files by name from ~/Documents/Meridian, one-page format, and the verify ask: <em>"verify every figure against the source files and flag any currency mixing before delivering."</em> Do not rewrite it tonight; the words that earned trust are the words that get scheduled.</p></div>
+      <div class="step"><p><strong>Open Automation</strong> and create a scheduled task from that instruction. Cadence: <strong>weekly, Monday, 7:00am</strong>. The saved instruction is now a template - frozen, not improvised per run.</p></div>
+      <div class="step"><p><strong>Set the push target: Slack.</strong> Pick the channel where Meridian's stakeholders actually look. The briefing becomes a shared Monday artifact, not a file waiting on your desktop.</p></div>
+      <div class="step"><p><strong>Confirm the verify ask is IN the scheduled text.</strong> Read the saved template one more time and find the clause. That clause is the whole point of this session: on Monday at 7am, it is the only checker in the room.</p></div>
+      <div class="step"><p><strong>Test-fire once now.</strong> Run the scheduled task manually tonight and check the push lands in Slack formatted and complete. Never let a schedule's first-ever run be the unattended one.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ BUILD-ALONG 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Build-along 2 of 2</span>
+      <h2>A one-time scheduled run <span class="tag demo">★ 6 min · everyone does it</span></h2>
+    </div>
+    <p class="lede">The other end of the cadence menu: a deadline task that fires exactly once, so your head does not have to hold it.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Create a one-time task</strong> for Friday 4:00pm: <em>"Check ~/Documents/Meridian for the pack artifacts produced so far (b3 sales analysis, b4 report + competitor matrix, b5 launch deck), and push a one-line status per artifact - present, missing, or stale - to Slack."</em></p></div>
+      <div class="step"><p><strong>Note the shape:</strong> read-only, low stakes, output is a status line - the perfect one-time task. Deadline checks, pre-meeting pulls, day-before reminders all fit this slot.</p></div>
+      <div class="step"><p><strong>Friday, close the loop:</strong> when the status lands, do your first 5-minute audit trail review on the Monday briefing task too. Two schedules now exist; the ritual starts this week.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Why the pack needed this artifact.</strong> Meridian's market entry is not a one-shot report; it is a decision that stays live for months. A briefing that builds itself every Monday means leadership tracks Malaysia on fresh numbers without anyone burning Sunday night on it - and the b10 capstone will audit this very task's trail to prove the automation deserved its schedule.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 25-35 min total</span></h2>
+    </div>
+    <ul>
+      <li>Schedule <strong>ONE task from your own work</strong> - and only one that already has three clean manual runs behind it. If nothing qualifies yet, your homework is the three manual runs, not the schedule. That is the ladder working, not you falling behind.</li>
+      <li>Before saving it, read the instruction once more and confirm the verify clause is inside the scheduled text - not in your head, not in a note, inside the words that run at 7am.</li>
+      <li>Set a calendar reminder for <strong>Friday: 5-minute audit trail review</strong> - skim what your scheduled tasks ran, read, and wrote, and spot-check one pushed figure against its source. Recurring, weekly, permanent.</li>
+      <li>Watch Monday's briefing land in Slack, then verify one figure against the source file yourself. Trust the schedule the way you trust a colleague: warmly, and with spot checks.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This course teaches the working core of the official WorkBuddy documentation and Tencent Cloud's guides, cross-checked against independent coverage. WorkBuddy is a fast-moving product (global launch May 2026) - cadence options, channel lists and UI names drift, so re-verify at workbuddy.ai. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - "What WorkBuddy Can Do": scheduled automation (hourly/daily/weekly/one-time) with push to chat platforms</span><span class="note">Cadences + push targets · taught in Part 1</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WorkBuddy docs - Automation feature + Daily Briefing practice case</span><span class="note">The canonical recurring-digest pattern · adapted weekly for Meridian in Build-along 1</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WorkBuddy docs - Platform Integration (Slack, Telegram, Discord, WeChat Work, Feishu, DingTalk, QQ)</span><span class="note">The push-channel list · same platforms trigger tasks in b9</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">WorkBuddy docs - Permission Modes</span><span class="note">Introduced in b1; tonight's warn callout is where the setting earns its keep · b10 completes the governance story</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What qualifies an instruction for a schedule?</p>
+      <button class="qopt" type="button">A · It is written with all five levers, so it is ready to automate immediately</button>
+      <button class="qopt" type="button">B · You have run it manually three or more times with clean results</button>
+      <button class="qopt" type="button">C · It is low-stakes enough that errors would not matter</button>
+      <p class="qwhy">Five levers make an instruction good; three clean manual runs make it proven against real data variation. And "low-stakes so errors are fine" is how compounding errors get a calendar slot.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Why must the verify ask live inside the scheduled instruction itself?</p>
+      <button class="qopt" type="button">A · It makes the pushed message longer and more professional</button>
+      <button class="qopt" type="button">B · It does not need to - you can verify manually whenever you get around to it</button>
+      <button class="qopt" type="button">C · A scheduled run has nobody at the plan gate, so the instruction's own verify clause is the only checker in the room</button>
+      <p class="qwhy">At Monday 7am you are asleep. The verify problem also compounds on a schedule - a wrong weekly number ships weekly and builds false trust each time. The clause inside the template checks every run, including the ones you never watch.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Anything is now scheduled on your machine. What new weekly habit exists?</p>
+      <button class="qopt" type="button">A · A 5-minute audit trail review - skim what ran, what it read and wrote, spot-check one pushed figure</button>
+      <button class="qopt" type="button">B · Rewriting the scheduled instruction each week so it stays fresh</button>
+      <button class="qopt" type="button">C · None - the point of automation is never looking at it again</button>
+      <p class="qwhy">Set-and-forget is how a wrong number builds a track record. And rewriting weekly destroys the very thing that earned the schedule - the proven template. Five minutes on Friday keeps the trust honest.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Operator session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The four cadences</b><span>Hourly (monitors) · daily (digests) · weekly (briefings) · one-time (deadlines). Cadence is a design decision matched to task shape.</span></div>
+      <div class="cheat-item"><b>The push targets</b><span>Slack · Telegram · Discord · WeChat Work · Feishu · DingTalk · QQ - results land where the team already looks. Same platforms trigger tasks in b9.</span></div>
+      <div class="cheat-item"><b>The canonical pattern</b><span>The Daily Briefing practice case: recurring instruction, same sources, one digest, one channel. Every schedule is this shape.</span></div>
+      <div class="cheat-item"><b>The promotion rule</b><span>Manual x3 with clean results → freeze the template → schedule. A dirty run restarts the count. Nothing skips the ladder.</span></div>
+      <div class="cheat-item"><b>Why it is strict</b><span>The verify problem compounds: a wrong weekly number ships weekly and earns false trust. b2's currency trap on a schedule = S$102,947.00 to leadership, every Monday.</span></div>
+      <div class="cheat-item"><b>The empty gate</b><span>Scheduled runs have nobody at plan confirmation - so keep Permission Modes conservative and the verify clause inside the instruction text.</span></div>
+      <div class="cheat-item"><b>Pack artifact 5</b><span>b2's briefing (Q2 S$46,332.00 · +23.1% · one page), weekly Monday 7am, pushed to Slack - test-fired once manually before its first unattended run.</span></div>
+      <div class="cheat-item"><b>The Friday ritual</b><span>5-minute audit trail review of every scheduled task, plus one spot-checked figure. On the calendar, recurring, from this week.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Operator session 8 of 10 · learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b7-connectors.html">← Prev: Connectors</a> &nbsp;·&nbsp; <a href="b9-remote-bot-memory.html">Next: Remote bot + memory →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

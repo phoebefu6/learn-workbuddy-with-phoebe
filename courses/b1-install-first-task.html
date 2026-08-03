@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operator session 1 · Install + your first task - learn workbuddy with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-workbuddy-with-phoebe</a> / Operator session 1 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe · Operator track · Session 1 of 10</div>
+    <h1>Install + your <span class="accent">first task</span></h1>
+    <p class="sub">WorkBuddy is not a chatbot - it is an agent that takes one plain-language instruction, plans the steps, executes them on your computer, and hands you a finished file. Tonight you install it, authorize exactly the folders it may touch, run your first real task end to end, and learn the four-stage loop every task follows. By b10 you will have built a complete market-entry pack for Meridian, a Singapore tea brand heading into Malaysia - one artifact per session, all through WorkBuddy.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Operator track</span>
+      <span class="chip audience">Office professionals: analysts · marketers · ops · anyone with deadlines</span>
+      <span class="chip audience">No coding needed · Win 10/11 or macOS 10.15+</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · What WorkBuddy is + the loop</span>
+      <span class="a3" style="flex:5">18-42 · Build-along: install + first task</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How this track works</h2>
+    </div>
+    <p class="lede">Ten sessions, one running project: the <strong>Meridian market-entry pack</strong>. Meridian is a Singapore specialty-tea brand entering Malaysia, and every session from b3 on adds one real artifact through WorkBuddy: sales analysis (b3), research report + competitor matrix (b4), launch deck (b5), repeatable workflows (b6), connected tools (b7), a scheduled weekly briefing (b8), phone-triggered tasks (b9), and the assembled, verified pack (b10). Tonight and b2 build the two habits everything else stands on: safe setup and sharp instructions.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Build-along - everyone does it</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      WorkBuddy installed and signed in, folder access scoped to exactly one project folder, your first finished deliverable produced from a single instruction, and the four-stage loop - Understand, Plan, Act, Deliver - drawn from memory. Plus the operator's rule: confirm the plan before it runs.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT WORKBUDDY IS ============ -->
+  <section class="section" id="what-workbuddy-is">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers Tencent Cloud "What WorkBuddy Can Do", launch announcements</span>
+      <h2>You say, it does <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Tencent's own framing is the whole product in four words: <em>"you say, it does."</em> A chatbot gives you advice about your work; WorkBuddy gives you the work - a report, a deck, a merged spreadsheet, a renamed folder. Under the hood it is a multi-agent system: your instruction gets decomposed into sub-tasks routed to specialist agents that run concurrently. You never manage that machinery. You manage the instruction and the result.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The WorkBuddy loop: instruction in, Understand, Plan with confirmation, Act with tools and files, Deliver a verifiable file.">
+        <style>
+          .wbT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .wbS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .wbX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .wbN { font: 600 13px Inter, sans-serif; fill: #013340; }
+          .wbWire { stroke: #0052D9; stroke-width: 2.5; fill: none; marker-end: url(#wbHd); }
+        </style>
+        <defs>
+          <marker id="wbHd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0052D9"/>
+          </marker>
+        </defs>
+        <rect x="30" y="100" width="150" height="52" rx="8" fill="#1E293B"/>
+        <text class="wbT" x="46" y="122">INSTRUCTION</text>
+        <text class="wbS" x="46" y="140">"merge Q1 files..."</text>
+        <rect x="230" y="100" width="140" height="52" rx="8" fill="#003BA3"/>
+        <text class="wbT" x="246" y="122">UNDERSTAND</text>
+        <text class="wbS" x="246" y="140">goal, no syntax</text>
+        <rect x="420" y="100" width="140" height="52" rx="8" fill="#0052D9"/>
+        <text class="wbT" x="436" y="122">PLAN</text>
+        <text class="wbS" x="436" y="140">steps - you confirm</text>
+        <rect x="610" y="100" width="120" height="52" rx="8" fill="#2E7CF6"/>
+        <text class="wbT" x="626" y="122">ACT</text>
+        <text class="wbS" x="626" y="140">files + tools</text>
+        <rect x="770" y="100" width="90" height="52" rx="8" fill="#0087A8"/>
+        <text class="wbT" x="782" y="122">DELIVER</text>
+        <text class="wbS" x="782" y="140">a file</text>
+        <path class="wbWire" d="M180,126 L225,126"/>
+        <path class="wbWire" d="M370,126 L415,126"/>
+        <path class="wbWire" d="M560,126 L605,126"/>
+        <path class="wbWire" d="M730,126 L765,126"/>
+        <text class="wbX" x="420" y="80">the confirmation gate: nothing runs until you approve the plan</text>
+        <path class="wbWire" d="M470,98 C470,88 470,88 478,78" opacity="0"/>
+        <text class="wbX" x="230" y="196">sub-tasks fan out to specialist agents and run concurrently - you never see the machinery, only the plan and the result</text>
+        <rect x="30" y="230" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="wbN" x="54" y="242">Deliver means a verifiable FILE with an audit trail of changes - not a paragraph of advice you still have to act on.</text>
+        <rect x="30" y="266" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="wbN" x="54" y="278">Execution is sandboxed, and file access is limited to folders you authorized. b1's whole job: set that boundary well.</text>
+        <rect x="30" y="298" width="14" height="14" rx="3" fill="#0087A8"/>
+        <text class="wbN" x="54" y="310">Chatbot: "here is how you could merge those files." WorkBuddy: "merged-q1.xlsx is on your Desktop. Here is what changed."</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four-stage loop every WorkBuddy task follows</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What it can actually do (and where it shines)<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The documented task families, straight from Tencent Cloud's capability guide - keep this list, it is your delegation menu:</p>
+        <ul>
+          <li><strong>Documents + reports</strong> - work reports, technical docs, meeting notes from a brief description; descriptions turned into finished slide decks.</li>
+          <li><strong>Data analysis</strong> - reads your CSV and Excel files, finds trends, builds charts and dashboards.</li>
+          <li><strong>Research</strong> - compiles multi-source research into organized reports and competitive matrices.</li>
+          <li><strong>File operations</strong> - batch renaming, organizing, format conversion across whole folders.</li>
+          <li><strong>Scheduled automation</strong> - hourly, daily, weekly or one-time runs, pushing results to Slack, Telegram, Discord, WeChat Work, Feishu, DingTalk or QQ (b8).</li>
+        </ul>
+        <p>Behind these sit <strong>100+ built-in Experts</strong> (b5), <strong>20+ skill packages</strong> (b6), and connectors to GitHub, Jira, Confluence, Google Drive, Gmail, Notion and Slack (b7). It can also switch between models - Hunyuan, DeepSeek, GLM, Kimi, MiniMax - though the default is fine for standard office work.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What it is NOT - honest edges<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Independent reviews and Tencent's own docs agree on the edges. Knowing them makes you faster, not slower:</p>
+        <ul>
+          <li><strong>Output still needs your verification</strong> before it leaves the building - b10 makes this a discipline, and b2's simulator shows you exactly why.</li>
+          <li><strong>The global edition is young</strong> (worldwide launch May 2026) - international support and some features lag the China edition; UI names drift between updates.</li>
+          <li><strong>Advanced setups have real complexity</strong> - connectors and custom skills (b6-b7) take patience the first time.</li>
+          <li><strong>It executes; it does not decide for you.</strong> What is worth doing, for whom, to what standard - that stays your job. The whole leader track is about exactly this.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: SAFE SETUP ============ -->
+  <section class="section" id="safe-setup">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the official Install &amp; Use guide, Permission Modes docs</span>
+      <h2>The permission boundary <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">An agent that can touch your files is only as safe as the boundary you draw on day one. WorkBuddy's boundary has three layers: <strong>folder authorization</strong> (it can only see folders you granted), <strong>plan confirmation</strong> (you approve the steps before anything runs), and <strong>sandboxed execution</strong> (tasks run contained, with an audit trail of every change). The operator's discipline is to keep all three tight - starting with one project folder, not your whole disk.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three permission layers: folder authorization limits what WorkBuddy sees, plan confirmation gates what runs, sandbox and audit trail contain and record what executes.">
+        <style>
+          .psT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .psS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .psI { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .psX { font: 400 12px Inter, sans-serif; fill: #64748B; }
+          .psN { font: 600 13px Inter, sans-serif; fill: #013340; }
+        </style>
+        <rect x="40" y="46" width="800" height="64" rx="10" fill="#003BA3"/>
+        <text class="psT" x="60" y="72">LAYER 1 · FOLDER AUTHORIZATION</text>
+        <text class="psS" x="60" y="92">grant ~/Documents/Meridian only - not Desktop, not Documents, not the whole drive</text>
+        <rect x="90" y="126" width="700" height="64" rx="10" fill="#0052D9"/>
+        <text class="psT" x="110" y="152">LAYER 2 · PLAN CONFIRMATION</text>
+        <text class="psS" x="110" y="172">every task shows its steps first - read them, then approve. The gate is you.</text>
+        <rect x="140" y="206" width="600" height="64" rx="10" fill="#2E7CF6"/>
+        <text class="psT" x="160" y="232">LAYER 3 · SANDBOX + AUDIT TRAIL</text>
+        <text class="psS" x="160" y="252">execution runs contained; every file change is recorded and reviewable</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three layers between an instruction and your files</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Folder strategy: the one-project rule<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Tonight you create <code>~/Documents/Meridian</code> and authorize only that. Everything the course touches lives there. The payoffs:</p>
+        <ul>
+          <li><strong>Blast radius</strong> - a misunderstood instruction can only rearrange one folder, not your life.</li>
+          <li><strong>Better results</strong> - a scoped folder means the agent finds the right files instead of guessing among thousands (this becomes the Context lever in b2).</li>
+          <li><strong>Clean audits</strong> - one folder, one project, one reviewable trail of changes.</li>
+        </ul>
+        <p>Widen access later, deliberately, folder by folder - after b2 has taught you what the agent does with what it can see. Never grant the whole home directory to get past a permission prompt.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Permission Modes + Data Management, in plain words<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two settings pages worth opening once this week:</p>
+        <ul>
+          <li><strong>Permission Modes</strong> - how much the agent may do between confirmations. Start conservative: confirm plans, confirm outward actions. Loosen per-task-type only once a pattern has earned trust (b8's scheduled tasks are where this matters).</li>
+          <li><strong>Data Management</strong> - what is stored, where, and how to clear it. The desktop app works on local files without a mandatory cloud upload - one of WorkBuddy's genuine differentiators - but connectors (b7) change that picture per-connector, so revisit this page then.</li>
+          <li><strong>Memory</strong> - private to you, editable defaults (your role, preferred formats). Leave it empty tonight; b9 fills it deliberately.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1: INSTALL ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along 1 of 2</span>
+      <h2>Install + scope the boundary <span class="tag demo">★ 10 min · everyone does it</span></h2>
+    </div>
+    <p class="lede">Straight from the official overseas guide. Requirements: Windows 10/11 or macOS 10.15+, about 150-180 MB, stable internet. Free plan is fine for the whole course.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Download</strong> from <code>workbuddy.ai</code> - <code>WorkBuddySetup.exe</code> on Windows, <code>WorkBuddy.dmg</code> on macOS (drag to Applications; if blocked: System Settings → Privacy &amp; Security → Open Anyway).</p></div>
+      <div class="step"><p><strong>Sign in</strong> with your account. Default model settings are fine for standard office work - do not touch Model Configuration tonight.</p></div>
+      <div class="step"><p><strong>Create the project folder</strong>: <code>~/Documents/Meridian</code>. Drop in any two or three spreadsheets or docs you have lying around - real material, not toys.</p></div>
+      <div class="step"><p><strong>Authorize ONLY that folder</strong> when the folder-access prompt appears. Decline the broad grants. This is Layer 1, set correctly on day one.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Teams plan note (for the leader track cohort)</strong>
+      Team seats run ~$40/seat/month with 1,000 pooled Credits and an Admin Console for centralized governance - a5 covers the economics. Operators: the free tier carries this whole course; re-verify plans at workbuddy.ai, they drift.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2: FIRST TASK ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Build-along 2 of 2</span>
+      <h2>Your first finished deliverable <span class="tag demo">★ 12 min · everyone does it</span></h2>
+    </div>
+    <p class="lede">The official guide's advice for a first instruction: <em>describe the task in plain language - the more specific, the better.</em> You will feel the four-stage loop once, end to end, on your own files.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Instruct.</strong> In the task bar, describe one real chore on the files in your Meridian folder. Pattern to imitate: <em>"Merge every Excel file in ~/Documents/Meridian into one sheet, then generate a bar chart plus a one-page summary of what stands out."</em></p></div>
+      <div class="step"><p><strong>Read the plan.</strong> WorkBuddy shows its steps before running - Understand and Plan made visible. Check: right files? right output? Then confirm. Never rubber-stamp; this gate is your seatbelt for the rest of the course.</p></div>
+      <div class="step"><p><strong>Watch it act.</strong> Sub-tasks execute in the sandbox. Notice you can keep working - this is delegation, not supervision.</p></div>
+      <div class="step"><p><strong>Open the deliverable.</strong> A real file, plus the audit trail of what changed. Skim the trail once tonight so you know where it lives - b10 turns that skim into a discipline.</p></div>
+      <div class="step"><p><strong>Say the contract out loud:</strong> one instruction in, one verifiable file out. Everything else in this course is about making both sides of that contract sharper.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Why the plan gate matters.</strong> "Clean up the Q1 folder" can mean archive-by-month or delete-the-duplicates. Same words, opposite file operations. The plan screen is where that ambiguity surfaces BEFORE anything moves - and b2's simulator is an hour of learning to kill the ambiguity in the instruction itself.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 20-30 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run three more tasks from the delegation menu in Part 1 - one file operation, one document task, one data task - on real files in your Meridian folder. Read every plan before confirming.</li>
+      <li>Draw the four-stage loop from memory - Understand, Plan, Act, Deliver, plus where the confirmation gate and audit trail sit - then check against Part 1's diagram.</li>
+      <li>Write down the one task at work you most wish you could hand off. Bring it to b2 - it becomes your personal test case for the instruction simulator.</li>
+      <li>Open Permission Modes and Data Management once, just to see what is there. Change nothing yet.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This course teaches the working core of the official WorkBuddy documentation and Tencent Cloud's guides, cross-checked against independent coverage. WorkBuddy is a fast-moving product (global launch May 2026) - names and plans drift, so each session links its sources. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - "AI Agent for Business Automation: What WorkBuddy Can Do"</span><span class="note">Task families, four-stage loop, audit trail · taught in Part 1</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - "WorkBuddy Download, Install &amp; Use Guide (Overseas)"</span><span class="note">Requirements, install steps, folder authorization, first task · Build-alongs 1-2</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">WorkBuddy docs - Permission Modes, Data Management, Memory</span><span class="note">Introduced in plain words; b9 (Memory) and b10 (audit) go deeper</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Launch coverage - TechNode, PR Newswire (SuperAI 2026)</span><span class="note">Positioning + multi-model support; the landscape view is leader session a1</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What makes WorkBuddy different from a chatbot?</p>
+      <button class="qopt" type="button">A · It uses a bigger model than chatbots do</button>
+      <button class="qopt" type="button">B · It plans and executes multi-step work and delivers a verifiable file - not advice</button>
+      <button class="qopt" type="button">C · It answers faster</button>
+      <p class="qwhy">"You say, it does." A chatbot tells you how to merge the files; WorkBuddy hands you merged-q1.xlsx plus an audit trail. Model size is not the difference - execution is.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · The safest folder-access setup for your first week is:</p>
+      <button class="qopt" type="button">A · Authorize your whole home directory so nothing ever fails on permissions</button>
+      <button class="qopt" type="button">B · Authorize nothing and paste file contents into the task bar</button>
+      <button class="qopt" type="button">C · Authorize one project folder and grow access deliberately, folder by folder</button>
+      <p class="qwhy">One folder = small blast radius, better file-finding, clean audit trail. Broad grants trade a moment's convenience for a permanent loss of the boundary. (And pasting everything defeats the point of an agent with file access.)</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Where does YOUR judgment sit inside the four-stage loop?</p>
+      <button class="qopt" type="button">A · At the plan confirmation gate before Act, and on the deliverable + audit trail after</button>
+      <button class="qopt" type="button">B · Nowhere - the point of an agent is that it needs no supervision</button>
+      <button class="qopt" type="button">C · You should watch every sub-task execute in real time</button>
+      <p class="qwhy">Two checkpoints, not zero and not constant babysitting: approve the plan going in, verify the deliverable coming out. That is the operator's whole rhythm - b2 sharpens the input, b10 sharpens the output check.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Operator session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The contract</b><span>One plain-language instruction in, one verifiable file out - "you say, it does." Advice is a chatbot; a deliverable is WorkBuddy.</span></div>
+      <div class="cheat-item"><b>The loop</b><span>Understand → Plan (you confirm) → Act (sandboxed) → Deliver (file + audit trail).</span></div>
+      <div class="cheat-item"><b>Delegation menu</b><span>Documents + reports · data analysis · research · batch file ops · scheduled automation. Behind them: 100+ Experts, 20+ skill packages, connectors.</span></div>
+      <div class="cheat-item"><b>The boundary</b><span>Layer 1 folder authorization · Layer 2 plan confirmation · Layer 3 sandbox + audit trail. Keep all three tight.</span></div>
+      <div class="cheat-item"><b>One-project rule</b><span>Authorize ~/Documents/Meridian only. Widen deliberately, never to escape a prompt.</span></div>
+      <div class="cheat-item"><b>Install facts</b><span>Win 10/11 or macOS 10.15+ · ~150-180 MB · free tier carries this course · defaults fine, leave Model Configuration alone.</span></div>
+      <div class="cheat-item"><b>Two checkpoints</b><span>Approve the plan going in; verify the deliverable (and skim the audit trail) coming out.</span></div>
+      <div class="cheat-item"><b>Running project</b><span>Meridian: SG tea brand entering MY. b3-b10 each add one artifact until the market-entry pack ships, verified, in b10.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Operator session 1 of 10 · learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b2-instruction-craft.html">Next: Instruction craft →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

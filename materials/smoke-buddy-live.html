@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>smoke - buddy-live.js</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+<div class="wrap" style="padding:2rem 1.5rem;">
+  <h2>Scorecard - all off (expect 2/10)</h2>
+  <div class="agentbox" data-mode="score" data-levers=""></div>
+  <h2>Scorecard - all on (expect 10/10)</h2>
+  <div class="agentbox" data-mode="score"></div>
+  <h2>Trace: briefing, no levers</h2>
+  <div class="agentbox" data-mode="trace" data-scenario="briefing" data-levers=""></div>
+  <h2>Trace: deck, format only</h2>
+  <div class="agentbox" data-mode="trace" data-scenario="deck" data-levers="goal,context,format"></div>
+  <h2>Trace: pack, no verify (trap ships)</h2>
+  <div class="agentbox" data-mode="trace" data-scenario="pack" data-levers="goal,context,format,expert"></div>
+</div>
+<script src="../assets/buddy-live.js?v=1"></script>
+</body>
+</html>

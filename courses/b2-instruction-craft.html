@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operator session 2 · Instruction craft - learn workbuddy with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-workbuddy-with-phoebe</a> / Operator session 2 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn WorkBuddy with Phoebe · Operator track · Session 2 of 10</div>
+    <h1>Instruction <span class="accent">craft</span></h1>
+    <p class="sub">Same agent, same data, opposite outcomes - the difference is the instruction. Tonight you learn the five levers that decide whether a WorkBuddy deliverable lands usable or lands in the bin: a clear goal, reachable context, a specified format, the right Expert, and a verify ask. You will pull each lever live in a simulator over Meridian's real numbers, and watch a 10-task scorecard climb from 2/10 to 10/10 as the levers come on. This is the session the other eight stand on.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Operator track</span>
+      <span class="chip audience">Office professionals - b1 install assumed</span>
+      <span class="chip audience">All in-browser tonight · no WorkBuddy needed at your seat</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-15 · The five levers</span>
+      <span class="a3" style="flex:6">15-42 · Simulator: traces + scorecard</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why instructions, this early</h2>
+    </div>
+    <p class="lede">b1 ended on the operator's contract: one instruction in, one verifiable file out. Every session after tonight - data analysis, research, decks, automation - is that contract applied to a new task family. So before touching any of them, we sharpen the input side once, properly. The official guide's one line of advice - <em>"the more specific, the better"</em> - is true and not enough. Tonight makes it operational: five named levers you can check off before you press go.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Simulator - step through + toggle levers</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The five-lever checklist memorized, three failure signatures you can diagnose on sight (invented-goal deliverable, placeholder soup, silent wrong number), and a personal instruction template for your own most-wanted task - tested against the simulator's golden set.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE FIVE LEVERS ============ -->
+  <section class="section" id="five-levers">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · distilled from the official task guides + practice cases</span>
+      <h2>The five levers of a working instruction <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Every usable WorkBuddy deliverable we could trace back had five properties in the instruction. Every dud was missing at least one. Learn them as a pre-flight checklist - goal, context, format, expert, verify - and "prompt quality" stops being a vibe and becomes a diagnosis.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five instruction levers: clear goal, context and files, output format, right Expert, verify ask - each with its failure signature when missing.">
+        <style>
+          .lvT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .lvS { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; opacity: .92; }
+          .lvI { font: 700 12.5px Inter, sans-serif; fill: #1E293B; }
+          .lvX { font: 400 11.5px Inter, sans-serif; fill: #64748B; }
+          .lvN { font: 600 13px Inter, sans-serif; fill: #013340; }
+        </style>
+        <rect x="30" y="40" width="240" height="52" rx="8" fill="#003BA3"/>
+        <text class="lvT" x="46" y="62">1 · CLEAR GOAL</text>
+        <text class="lvS" x="46" y="80">outcome + audience + scope</text>
+        <text class="lvI" x="300" y="62">missing → the agent guesses your goal</text>
+        <text class="lvX" x="300" y="80">signature: polished deliverable, about the wrong thing</text>
+        <rect x="30" y="104" width="240" height="52" rx="8" fill="#0052D9"/>
+        <text class="lvT" x="46" y="126">2 · CONTEXT + FILES</text>
+        <text class="lvS" x="46" y="144">folders authorized, files named</text>
+        <text class="lvI" x="300" y="126">missing → structure without substance</text>
+        <text class="lvX" x="300" y="144">signature: [DATA UNAVAILABLE] placeholders, broken links</text>
+        <rect x="30" y="168" width="240" height="52" rx="8" fill="#2E7CF6"/>
+        <text class="lvT" x="46" y="190">3 · OUTPUT FORMAT</text>
+        <text class="lvS" x="46" y="208">type, length, structure</text>
+        <text class="lvI" x="300" y="190">missing → right data, unusable shape</text>
+        <text class="lvX" x="300" y="208">signature: six pages where one was needed, prose where a matrix was needed</text>
+        <rect x="30" y="232" width="240" height="52" rx="8" fill="#0087A8"/>
+        <text class="lvT" x="46" y="254">4 · RIGHT EXPERT</text>
+        <text class="lvS" x="46" y="272">craft, not just conversion</text>
+        <text class="lvI" x="300" y="254">missing → format met, craft absent</text>
+        <text class="lvX" x="300" y="272">signature: report paragraphs pasted onto slides</text>
+        <rect x="30" y="296" width="240" height="52" rx="8" fill="#1E293B"/>
+        <text class="lvT" x="46" y="318">5 · VERIFY ASK</text>
+        <text class="lvS" x="46" y="336">self-check + audit trail</text>
+        <text class="lvI" x="300" y="318">missing → the silent wrong number ships</text>
+        <text class="lvX" x="300" y="336">signature: nothing fails loudly - the error is found by your boss</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - five levers, five failure signatures worth memorizing</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>One instruction, rewritten five times<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Watch one real task acquire the levers one at a time:</p>
+        <ul>
+          <li><strong>Bare:</strong> "Do something with the sales data."</li>
+          <li><strong>+ Goal:</strong> "Analyze H1 sales <em>for Monday's leadership sync</em>."</li>
+          <li><strong>+ Context:</strong> "...from <code>~/Documents/Meridian/sg-sales-2026.xlsx</code>."</li>
+          <li><strong>+ Format:</strong> "...as a one-pager: headline number, top product, 3 bullets max 15 words, 1 risk."</li>
+          <li><strong>+ Verify:</strong> "...and before delivering, cross-check every figure against the source sheet and attach the audit trail."</li>
+        </ul>
+        <p>Each added clause removes one guess the agent would otherwise make on your behalf. The simulator below lets you feel exactly which guess each clause removes.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The instruction is the spec.</strong> Teams that get compounding value from agents keep a shared doc of instruction templates per recurring task - goal and format frozen, only the file paths changing week to week. b6 turns your best instructions into reusable custom skills; tonight produces your first template.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Which lever does WorkBuddy's UI hold?<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Map the levers onto product surfaces you met in b1 and will meet soon - the product can hold a lever FOR you, if you use it:</p>
+        <ul>
+          <li><strong>Goal</strong> - yours alone. No UI can rescue a vague goal; the plan-confirmation screen only reveals the guess it forced.</li>
+          <li><strong>Context</strong> - folder authorization (b1) + naming files in the instruction. Connectors (b7) extend reachable context to Drive, Gmail, Notion.</li>
+          <li><strong>Format</strong> - the instruction, plus Memory (b9) can hold standing format defaults ("my briefings are always one page").</li>
+          <li><strong>Expert</strong> - the Expert Center (b5). 100+ specialists; picking one is a single clause in the instruction.</li>
+          <li><strong>Verify</strong> - the audit trail exists on every task (b1); the verify ASK makes the agent use it on itself before delivering. b10 builds the full discipline.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1: BRIEFING TRACE ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Simulator 1 of 3</span>
+      <h2>Goal, context, format - felt one at a time <span class="tag demo">★ 10 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">The Monday briefing task from Meridian's real week. Start with every lever off and step through - then turn on <strong>Clear goal</strong>, then <strong>Context + files</strong>, then <strong>Output format</strong>, replaying each time. Three different failures, three different fixes, one task.</p>
+
+    <div class="steps">
+      <div class="step"><p>All off: the agent briefs on <em>the global tea industry</em>. Polished, useless - the invented-goal signature.</p></div>
+      <div class="step"><p>+ Goal: now it knows what to build - and hits PERMISSION DENIED. Placeholder soup: structure without substance.</p></div>
+      <div class="step"><p>+ Context: real numbers appear - <strong>Q2 S$46,332.00, +23.1% vs Q1</strong>, computed live in your browser - buried in six pages of prose.</p></div>
+      <div class="step"><p>+ Format: the same numbers land as a one-pager readable in 90 seconds. Watch what the instruction's format clause did to the SAME data.</p></div>
+    </div>
+
+    <div class="agentbox" data-mode="trace" data-scenario="briefing" data-levers=""></div>
+
+    <div class="callout tip">
+      <strong>How to read every simulator in this course</strong>
+      🗣 your instruction · 🧠 Understand/Plan · ⚙️ Act · 📦 result · 🛡 verify check · 📄 Deliver. WorkBuddy's words are a scripted teaching simulation - the failures are the characteristic ones, replayed. Every figure in a 📦 step is genuinely computed, in your browser, from the embedded Meridian data.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2: DECK TRACE ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Simulator 2 of 3</span>
+      <h2>Format pins the shape; the Expert brings the craft <span class="tag demo">★ 6 min · explore</span></h2>
+    </div>
+    <p class="lede">The launch-deck task, with goal and context already on. Two levers remain and they fail differently: no format = a 26-slide dump; format without the slide-design Expert = ten slides of pasted paragraphs. Toggle <strong>Output format</strong> and <strong>Right Expert</strong> and read all three endings.</p>
+
+    <div class="agentbox" data-mode="trace" data-scenario="deck" data-levers="goal,context"></div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>"It met the spec and still wasn't usable."</strong> The most common complaint about agent deliverables is the expert gap - the output satisfies every stated constraint and lacks the craft nobody stated. Naming an Expert is the cheapest clause in the instruction: one phrase buys slide grammar, matrix discipline, or legal-drafting caution. b5 tours the Expert Center properly.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 3: PACK TRACE ============ -->
+  <section class="section" id="demo-3">
+    <div class="section-kicker">
+      <span class="klabel">Simulator 3 of 3</span>
+      <h2>The silent wrong number <span class="tag demo">★ 8 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">The scariest failure is the one that throws no error. Meridian's Malaysia pilot file is priced in <strong>MYR</strong>; the Singapore books are in <strong>SGD</strong>. Without a verify ask, the agent sums RM straight into S$ and ships a pack totalling <strong>S$102,947.00</strong> - clean, confident, wrong by 3.3x on the MY line. Turn on <strong>Verify ask</strong> and watch the cross-foot check catch it: <strong>RM 18,985.00 → S$5,753.03</strong>, corrected total <strong>S$89,715.03</strong>, audit trail attached.</p>
+
+    <div class="agentbox" data-mode="trace" data-scenario="pack" data-levers="goal,context,format,expert"></div>
+
+    <div class="callout warn">
+      <strong>The rule this trace burns in</strong>
+      Verified work, not just finished work. The trap was in the DATA the whole time - the verify lever did not remove it, it surfaced it before leadership did. Any figure leaving your hands gets a verify ask; b10 makes this the shipping discipline for the whole pack.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 4: SCORECARD ============ -->
+  <section class="section" id="demo-4">
+    <div class="section-kicker">
+      <span class="klabel">The golden set</span>
+      <h2>The 10-task scorecard - your course-long benchmark <span class="tag demo">★ 8 min · explore</span></h2>
+    </div>
+    <p class="lede">Ten real office tasks, from renaming receipts to assembling the market-entry pack. Start with every lever off and climb the ladder - <strong>2 → 4 → 6 → 8 → 9 → 10</strong> - reading the failure text on every red row. This exact ladder is the operator track's spine: the sessions ahead earn you each lever for real.</p>
+
+    <div class="steps">
+      <div class="step"><p>All off: <strong>2/10</strong>. Only mechanical tasks survive a bare instruction - renames and conversions with no ambiguity to resolve.</p></div>
+      <div class="step"><p>+ Clear goal: <strong>4/10</strong>. The "do something" tasks land, because there is no longer a guess at the center.</p></div>
+      <div class="step"><p>+ Context + files: <strong>6/10</strong> (b1's folder rule, b3-b4's file work). Analyses and comparisons reach real data.</p></div>
+      <div class="step"><p>+ Output format: <strong>8/10</strong> (b3-b4). Briefings and matrices arrive in usable shape.</p></div>
+      <div class="step"><p>+ Right Expert: <strong>9/10</strong> (b5). The deck acquires craft.</p></div>
+      <div class="step"><p>+ Verify ask: <strong>10/10</strong> (b10). The pack ships with the currency trap caught, not shipped.</p></div>
+    </div>
+
+    <div class="agentbox" data-mode="score" data-levers=""></div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 25-35 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the scorecard ladder until you can predict every row's flip before clicking. Then read task 10's verify failure once more, slowly.</li>
+      <li>Take the task you brought from b1 and write it as a five-lever instruction: goal + audience, files by name, exact format, Expert if any, verify ask. That is your first template - save it.</li>
+      <li>Run that instruction in the real WorkBuddy on your Meridian folder. Compare the plan it proposes against the plan you imagined. Where they differ, a lever is loose.</li>
+      <li>Rewrite one vague request you actually sent someone this month (to a colleague or an AI) with all five levers. Notice which lever you habitually skip - that is your signature failure.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">The five-lever frame is this course's distillation - built on the official guides' documented behaviors (plan confirmation, folder authorization, Experts, audit trail) and the failure patterns independent reviews report. The simulator is a teaching instrument, not a WorkBuddy benchmark. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - Install &amp; Use Guide: "describe the task in plain language (the more specific, the better)"</span><span class="note">Made operational as the five levers</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tencent Cloud - "What WorkBuddy Can Do": four-stage loop + audit trail</span><span class="note">The loop is the simulator's step grammar; the audit trail powers the verify lever</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">WorkBuddy docs - Expert Center, Memory, Practice Cases</span><span class="note">Expert lever previewed here; full tour in b5, Memory defaults in b9</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Independent reviews (Eigent, 2026) - "requires output verification before external use"</span><span class="note">The verify lever's evidence base; the discipline lands in b10</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · The deliverable is beautifully structured but full of [DATA UNAVAILABLE] placeholders. Which lever was off?</p>
+      <button class="qopt" type="button">A · Clear goal - it did not know what to build</button>
+      <button class="qopt" type="button">B · Verify ask - nothing checked the output</button>
+      <button class="qopt" type="button">C · Context + files - the data was never reachable</button>
+      <p class="qwhy">Placeholder soup is the context-off signature: the agent knew exactly what to build and could not reach the ingredients. Goal-off looks different - a confident deliverable about the wrong thing.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why is the missing verify ask the most dangerous lever to skip?</p>
+      <button class="qopt" type="button">A · Its failure is silent - the wrong number ships looking exactly like a right number</button>
+      <button class="qopt" type="button">B · It makes tasks run slower</button>
+      <button class="qopt" type="button">C · It is the hardest lever to write</button>
+      <p class="qwhy">Every other missing lever announces itself - wrong topic, placeholders, wrong shape, no craft. The unverified number fails only when someone downstream checks it. S$102,947 looked exactly as confident as S$89,715.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · On the golden set, why do 2 tasks pass with every lever off?</p>
+      <button class="qopt" type="button">A · Luck - rerunning would fail them</button>
+      <button class="qopt" type="button">B · Mechanical tasks carry no ambiguity - there is no guess for a bare instruction to get wrong</button>
+      <button class="qopt" type="button">C · Short instructions work better than long ones</button>
+      <p class="qwhy">"Convert board-update.docx to PDF" has one possible correct outcome. The levers exist to remove guesses; where there is nothing to guess, a bare instruction is already complete. Match instruction effort to task ambiguity.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Operator session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The five levers</b><span>Clear goal · Context + files · Output format · Right Expert · Verify ask. Pre-flight checklist before every non-trivial task.</span></div>
+      <div class="cheat-item"><b>Five signatures</b><span>Goal-off: wrong-thing deliverable · Context-off: placeholders · Format-off: unusable shape · Expert-off: no craft · Verify-off: silent wrong number.</span></div>
+      <div class="cheat-item"><b>The ladder</b><span>10-task golden set: 2 → 4 → 6 → 8 → 9 → 10 as levers come on. The track's spine: b1 context, b3-b4 format, b5 expert, b10 verify.</span></div>
+      <div class="cheat-item"><b>Instruction template</b><span>[deliverable + audience] from [named files] as [type, length, structure], using [Expert]; cross-check figures + attach audit trail.</span></div>
+      <div class="cheat-item"><b>Effort matching</b><span>Mechanical tasks need one clear sentence. Ambiguous tasks need all five levers. Spend clauses where the guesses are.</span></div>
+      <div class="cheat-item"><b>The scary one</b><span>Unverified figures fail silently - S$102,947 vs S$89,715 was one missing clause. Any number leaving your hands gets a verify ask.</span></div>
+      <div class="cheat-item"><b>Who holds each lever</b><span>Goal: you alone · Context: folder auth + naming · Format: instruction + Memory (b9) · Expert: Expert Center (b5) · Verify: the ask + audit trail.</span></div>
+      <div class="cheat-item"><b>Honesty rail</b><span>The simulator is a teaching simulation; its figures ARE computed live from the embedded Meridian data (MYR at a fixed 3.30 teaching rate).</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Operator session 2 of 10 · learn-workbuddy-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b1-install-first-task.html">← b1: Install + first task</a> &nbsp;·&nbsp; <a href="b3-data-analysis.html">Next: Data analysis →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/buddy-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
