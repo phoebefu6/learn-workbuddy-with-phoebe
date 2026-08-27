@@ -87,10 +87,10 @@ body {
   color: #fff;
 }
 .agenda span { padding: .45rem .3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.agenda .a1 { background: var(--indigo-deep); }
-.agenda .a2 { background: var(--indigo-mid); }
-.agenda .a3 { background: var(--amber); color: var(--amber-ink); }
-.agenda .a4 { background: var(--indigo-soft); }
+.agenda .a1 { background: var(--indigo-deep); color: #fff; }
+.agenda .a2 { background: #296FDD; color: #fff; }
+.agenda .a3 { background: #007E9D; color: #fff; }
+.agenda .a4 { background: var(--indigo-soft); color: var(--ink); }
 
 /* ---------- toolbar ---------- */
 .toolbar {
@@ -954,3 +954,9 @@ figure.zoomable.can-scroll figcaption::after {
   color: var(--pv-flag);
 }
 /* === /LWP-PATCH === */
+
+
+/* .callout.warn had no rule; base .callout sets no background, so 7 warnings
+   rendered as plain indented paragraphs. Fixed red, so a warning reads as one
+   independent of brand hue. */
+.callout.warn { background: #FEF2F2; border-left: 4px solid #B91C1C; }
